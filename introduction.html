@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Mark Swoope">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+		<link href="normalize.css" type="text/css" rel="stylesheet">
+		<link href="main.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<ul id="navigation">
+			<li><a href="index.html">Syllabus</a></li>
+			<li><a class="current" href="#">Introduction</a></li>
+			<li><a href="resources.html">External resources</a></li>
+		</ul>
+		<div id="main-content">
+			<h1>Introduction</h1>
+
+			<p>The World Wide Web, or what is now known as simply: The Web, has a short but detailed history and a profound integration into our daily lives.  It's utility as a medium of communication and presentation seems limitless. Harnessing the power to create websites shall be the goal of this course.</p>
+
+			<h3>The significant entities that underlie a connection</h3>
+
+			<p>Among other concrete and conceptual entities that make the presentation and interactability of a website possible, the most fundamental ones you should know are: the <i>client</i> and the <i>server</i>.</p>
+
+			<p>In the World Wide Web, the client and server refer to computer programs that exist on the opposite ends of a connection.</p>
+
+			<p>The client first attempts to establish a connection with the server. If that server accepts the connection, then for the duration of that connection: the client and server exchange messages using the Hyper Text Transfer Protocol (HTTP) as their artificial language.</p>
+
+			<p>The type of message that an HTTP client sends to an HTTP server is known as a <i>request</i> and the type of message that an HTTP server sends in response to a request is known as a <i>response</i>.</p>
+			
+			<p>A request is usually a request for a resource that is identified by a <i>Uniform Resource Identifier</i> (URI), in which case the response will contain the contents of that resource if such a resource was found.</p>
+
+			<h3>The Uniform Resource Identifier</h3>
+
+			<p>A <i>web browser</i> is a type of web client that is user interactive, most of them display the URI of a web site or other resource in the address bar.</p>
+
+			<p>The components of a URI are: a <i>scheme</i>, an optional <i>authority</i>, a <i>path</i>, an optional <i>query</i>, and an optional <i>fragment</i>.</p>
+
+			The URI <tt>foo://example.com:8042/over/there?name=ferret#nose</tt> is composed of:
+			
+			<ul>
+				<li>"<tt>foo</tt>" for it's scheme</li>
+				<li>"<tt>example.com:8042</tt>" for it's authority</li>
+				<li>"<tt>/over/there</tt>" for it's path</li>
+				<li>"<tt>name=ferret</tt>" for it's query</li>
+				<li>"<tt>nose</tt>" for it's fragment</li>
+			</ul>
+
+			<p>The scheme component indicates how the rest of the URI is to be interpreted and how the resource it refers to is to be transmitted and presented. The authority component usually contains a host identifier  (such as "google.com") which identifies the server. The path component generally identifies a resource that is local to the authority, such as a file or web page on the server. The query component is a collection of variables that the server can use to determine how to generate the content of the requested resource. The fragment component usually identifies a section within the resource to navigate to.</p>
+
+
+			<h3>The languages that describe a web page</h3>
+
+			<p>Most resources that clients request are web documents or web pages; their contents are described in an artificial language known as the <i>HyperText Markup Language</i> (HTML), a language that a web browser can process and present in an aesthetic form to the user.</p>
+
+			<p>While HTML code describes the general structure and content of a web page, <i>Cascading Style Sheets</i> (CSS) code describes the style in which the elements of a web page should be rendered. The styling of an HTML element may include, among other things, it's size, color, positioning, margins, and borders.</p>
+
+			<p><i>JavaScript</i> is a language that can be used to describe the interactive behavior of a web page, aside from merely being able to click on links.</p>
+
+			<p>Together, these 3 languages make up the main languages of web development.</p>
+		</div>
+	</body>
+</html>
