@@ -85,3 +85,8 @@ table.data tr th {
 	border: thin solid;
 	padding: 8px;
 }
+
+tt {
+	font-family: 'Anonymous Pro', monospace;
+	background-color: #e8e8e8;
+}
