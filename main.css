@@ -1,5 +1,6 @@
 body {
 	font-family: 'Open Sans', sans-serif;
+	background-color: #ffffff;
 	margin: 0;
 	padding: 0;
 }
@@ -32,13 +33,14 @@ a:hover {
 }
 
 #navigation li a.current {
-	padding-left: 0;
+	padding-left: 24px;
 }
 
 #navigation li a.current:before {
 	display: inline-block;
+	position: absolute;
 	content: "\25b6";
-	padding-right: 8px;
+	left: 8px;
 }
 
 #main-content {
