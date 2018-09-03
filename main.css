@@ -78,17 +78,18 @@ table.info tr td {
 table.data {
 	border: thin solid;
 	border-collapse: collapse;
-	background-color: #e8e8e8;
 }
 
 table.data tr td {
 	border: thin solid;
 	padding: 8px;
+	background-color: #ffffff;
 }
 
 table.data tr th {
 	border: thin solid;
 	padding: 8px;
+	background-color: #e8e8e8;
 }
 
 tt {
