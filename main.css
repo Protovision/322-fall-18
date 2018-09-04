@@ -111,3 +111,11 @@ code {
 	font-size: medium;
 	padding: 4px;
 }
+
+.html-example {
+	all: initial;
+	display: block;
+	border: thin solid;
+	width: 100%;
+	padding: 4px;
+}

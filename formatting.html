@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Mark Swoope">
+		<title>CSE 322: Basic Formatting</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" type="text/css" rel="stylesheet">
+		<link href="normalize.css" type="text/css" rel="stylesheet">
+		<link href="main.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<ul id="navigation">
+			<li><a href="index.html">Syllabus</a></li>
+			<li><a href="introduction.html">Introduction</a></li>
+			<li><a href="html.html">HTML</a></li>
+			<li><a class="current" href="#">Basic Formatting</a></li>
+			<li><a href="resources.html">Resources</a></li>
+		</ul>
+		<div id="main-content">
+			<h1>Basic Formatting</h1>
+
+			<p>Most HTML elements follow the form <tt>&lt;TAG&gt;CONTENT&lt;/TAG&gt;</tt>, thus creating an HTML-only web page is only a matter of remembering the names and meanings of common tags.</p>
+
+			<p>You should already know that the <tt>p</tt> element displays it's content as a paragraph by placing it on a new line with a small amount of space inserted before and after it.</p>
+
+			<p>Another useful set of elements includes the heading elements: <tt>h1</tt>, <tt>h2</tt>, <tt>h3</tt>, <tt>h4</tt>, <tt>h5</tt>, and <tt>h6</tt>. They display their content as a heading, with large and bold font; heading elements should be used outside of paragraph elements.</p>
+
+			<p>Observe HTML code below and it's proceeding result:</p>
+
+			<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+        &lt;head&gt;
+                &lt;title&gt;A title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+                &lt;h1&gt;A heading&lt;/h1&gt;
+                &lt;p&gt;A paragraph.&lt;/p&gt;
+                &lt;h2&gt;A subheading&lt;/h2&gt;
+                &lt;h3&gt;A subsubheading&lt;/h3&gt;
+                &lt;p&gt;Another paragraph.&lt;/p&gt;
+                &lt;p&gt;Yet another paragraph.&lt;/p&gt;
+                &lt;p&gt;A paragraph with &lt;i&gt;italicized text&lt;/i&gt;, &lt;b&gt;bold text&lt;/b&gt;, and &lt;s&gt;strikethrough text&lt;/s&gt;.&lt;/p&gt;
+        &lt;/body&gt;
+&lt;/html&gt;
+			</code>
+
+			<div class="html-example">
+				<h1>A heading</h1>
+                		<p>A paragraph.</p>
+                		<h2>A subheading</h2>
+                		<h3>A subsubheading</h3>
+                		<p>Another paragraph.</p>
+                		<p>Yet another paragraph.</p>
+                		<p>A paragraph with <i>italicized text</i>, <b>bold text</b>, and <s>strikethrough text</s>.</p>
+			</div>
+
+			<p>As one can induce, <tt>h1</tt> produces the largest heading and all subsequent heading elements produce smaller headings.</p>
+
+			<p>The last paragraph demonstrates the effect of <tt>i</tt>, <tt>b</tt>, and <tt>s</tt> elements. By default, these elements produce italicized, bold, and strikethrough text respectively. These three elements can be nested to apply mixed formatting to the same content; for example <tt>&lt;i&gt;&lt;b&gt;&lt;s&gt;hello world&lt;/s&gt;&lt;/b&gt;&lt;/i&gt;</tt> produces <i><b><s>hello world</s></b></i> on this web page.</p>
+
+			
+		</div>
+	</body>
+</html>
