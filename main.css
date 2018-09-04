@@ -94,5 +94,20 @@ table.data tr th {
 
 tt {
 	font-family: 'Anonymous Pro', monospace;
+	color: #000000;
 	background-color: #e8e8e8;
+	white-space: pre-wrap;
+}
+
+code {
+	display: block;
+	border: thin solid;
+	font-family: 'Anonymous Pro', monospace;
+	color: #000000;
+	background-color: #e8e8e8;
+	white-space: pre-wrap;
+	width: 100%;
+	line-height: 1;
+	font-size: medium;
+	padding: 4px;
 }
