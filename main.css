@@ -17,7 +17,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-#navigation {
+body header nav {
 	margin: 5% 0% 5% 5%;
 	padding: 0;
 	border-top: thin solid;
@@ -27,26 +27,20 @@ a:hover {
 	list-style-type: none;
 }
 
-#navigation li {
+body header nav a {
+	display: block;
 	padding: 8px;
+	padding-left: 32px;
 }
 
-#navigation li a {
-	padding-left: 24px;
-}
-
-#navigation li a.current {
-	padding-left: 24px;
-}
-
-#navigation li a.current:before {
+nav a.current:before {
 	display: inline-block;
 	position: absolute;
 	content: "\25b6";
 	left: 8px;
 }
 
-#main-content {
+main {
 	margin: 5% 5% 5% 25%;
 	padding: 0% 5% 0% 5%;
 	width: 60%;

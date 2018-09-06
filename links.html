@@ -10,16 +10,18 @@
 		<link href="main.css" type="text/css" rel="stylesheet">
 	</head>
 	<body>
-		<ul id="navigation">
-			<li><a href="index.html">Syllabus</a></li>
-			<li><a href="introduction.html">Introduction</a></li>
-			<li><a href="html.html">HTML</a></li>
-			<li><a href="formatting.html">Basic Formatting</a></li>
-			<li><a href="tables.html">Lists and Tables</a></li>
-			<li><a class="current" href="#">Links and Images</a></li>
-			<li><a href="resources.html">Resources</a></li>
-		</ul>
-		<div id="main-content">
+		<header>
+			<nav>
+				<a href="index.html">Syllabus</a>
+				<a href="introduction.html">Introduction</a>
+				<a href="html.html">HTML</a>
+				<a href="formatting.html">Basic Formatting</a>
+				<a href="tables.html">Lists and Tables</a>
+				<a class="current" href="#">Links and Images</a>
+				<a href="resources.html">Resources</a>
+			</nav>
+		</header>
+		<main>
 			<h1>Links and Images</h1>
 
 			<p>The elements <tt>a</tt>, <tt>img</tt>, <tt>audio</tt>, and <tt>video</tt> can be used to insert links, images, audio, and video, respectively, in your webpage. They each require a set of <i>attributes</i>, each of which consists of a <i>name</i> and a <i>value</i>, controlling the how element works.</p>
@@ -64,7 +66,6 @@
 			<p>Not specifying a <tt>width</tt> and <tt>height</tt> attribute will display the image at full size, possibly altering the layout of the web page if the image is too big.</p>
 
 			<p>An image can also be used as a button that links to another page by using it as the content of an <tt>a</tt> element; example: <tt>&lt;a href="index.html"&gt;&lt;img src="home.png" alt="Home" width="64" height="64"&gt;&lt;/a&gt;</tt>.</p>
-
-		</div>
+		</main>
 	</body>
 </html>

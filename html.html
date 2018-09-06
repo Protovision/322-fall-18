@@ -10,16 +10,18 @@
 		<link href="main.css" type="text/css" rel="stylesheet">
 	</head>
 	<body>
-		<ul id="navigation">
-			<li><a href="index.html">Syllabus</a></li>
-			<li><a href="introduction.html">Introduction</a></li>
-			<li><a class="current" href="#">HTML</a></li>
-			<li><a href="formatting.html">Basic Formatting</a></li>
-			<li><a href="tables.html">Lists and Tables</a></li>
-			<li><a href="links.html">Links and Images</a></li>
-			<li><a href="resources.html">Resources</a></li>
-		</ul>
-		<div id="main-content">
+		<header>
+			<nav>
+				<a href="index.html">Syllabus</a>
+				<a href="introduction.html">Introduction</a>
+				<a class="current" href="#">HTML</a>
+				<a href="formatting.html">Basic Formatting</a>
+				<a href="tables.html">Lists and Tables</a>
+				<a href="links.html">Links and Images</a>
+				<a href="resources.html">Resources</a>
+			</nav>
+		</header>
+		<main>
 			<h1>The HyperText Markup Language</h1>
 
 			<p>If one wishes to learn how to make a website from scratch as fast as possible, HTML is the first and primary language to learn; all other web languages being of secondary importance.</p>
@@ -49,5 +51,6 @@
 
 			<p>All text that begins with <tt>&lt;html&gt;</tt> and ends with <tt>&lt;/html&gt;</tt> is the HTML document. The line <tt>&lt;!DOCTYPE html&gt;</tt> is not part of the document, it is only stored at the beginning of the same file that stores the document to indicate to web browsers that the file stores an HTML document. It is always required.</p>
 
+		</main>
 	</body>
 </html>
