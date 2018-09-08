@@ -1,115 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=PT+Mono");
+@import "normalize.css";
+:root {
+	--font-family: 'PT Sans', sans-serif;
+	--heading-font-family: 'PT Sans Caption', sans-serif;
+	--pre-tt-font-family: 'PT Mono', monospace;
+	--font-size: medium;
+	--line-height: 1.5;
+	--color: Black;
+	--a-color: SteelBlue;
+	--background-color: White;
+	--pre-tt-background-color: WhiteSmoke;
+}
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-size: medium;
-	line-height: 1.5;
-	color: #000000;
-	background-color: #ffffff;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	color: var(--color);
+	background-color: var(--background-color);
 	margin: 0;
 	padding: 0;
 }
-
-a {
-	text-decoration: none;
-	color: #2f7796;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
 body header nav {
 	margin: 5% 0% 5% 5%;
 	padding: 0;
-	border-top: thin solid;
-	border-bottom: thin solid;
 	width: 20%;
 	position: absolute;
+}
+body header nav ul {
+	margin: 0;
+	padding: 0;
 	list-style-type: none;
 }
-
-body header nav a {
+body header nav ul li {
 	display: block;
-	padding: 8px;
-	padding-left: 32px;
+	padding: 0.5em 0.5em 0.5em 1.5em;
 }
-
-nav a.current:before {
+body header nav ul li a.current:before {
 	display: inline-block;
 	position: absolute;
 	content: "\25b6";
-	left: 8px;
+	left: 0;
 }
-
-main {
-	margin: 5% 5% 5% 25%;
+body main {
+	margin: 5% 5% 5% 20%;
 	padding: 0% 5% 0% 5%;
-	width: 60%;
-	height: 80%;
+	width: 65%;
+	height: 100%;
 	position: absolute;
 }
-
-ul.boxed {
-	background-color: #e8e8e8;
-	border: thin solid;
-	padding: 24px;
+a { text-decoration: none; color: var(--a-color); }
+a:hover { text-decoration: underline; }
+h1,h2,h3,h4,h5,h6 { font-family: var(--heading-font-family); }
+/*
+body main ul { 
+	display: block;
+	margin: 0; 
+	padding: 0 1em 0 1em;
 	list-style-type: none;
 }
-
-ul.boxed li {
-	padding: 4px;
-}
-
-table.info {
-	display: block;
-	border: thin solid;
-	background-color: #e8e8e8;
-}
-
-table.info tr td {
-	padding: 8px;
-}
-
-table.data {
-	border: thin solid;
+body main ul li { display: block; padding: 0.25em; }*/
+body main table { 
+	border: thin solid; 
+	margin: 0; 
+	padding: 0;
 	border-collapse: collapse;
 }
-
-table.data tr td {
-	border: thin solid;
-	padding: 8px;
-	background-color: #ffffff;
+body main table th,td { 
+	border: thin solid; 
+	margin: 0;
+	padding: 0.25em;
 }
-
-table.data tr th {
-	border: thin solid;
-	padding: 8px;
-	background-color: #e8e8e8;
-}
-
-tt {
-	font-family: 'Anonymous Pro', monospace;
-	color: #000000;
-	background-color: #e8e8e8;
-	white-space: pre-wrap;
-}
-
-code {
+body main pre {
 	display: block;
+	margin: 0;
+	padding: 0.5em;
 	border: thin solid;
-	font-family: 'Anonymous Pro', monospace;
-	color: #000000;
-	background-color: #e8e8e8;
+	font-family: var(--pre-tt-font-family);
+	background-color: var(--pre-tt-background-color);
 	white-space: pre-wrap;
-	width: 100%;
 	line-height: 1;
-	font-size: medium;
-	padding: 4px;
 }
-
+body main tt {
+	font-family: var(--pre-tt-font-family);
+	background-color: var(--pre-tt-background-color);
+}
 .html-example {
-	all: initial;
-	display: block;
 	border: thin solid;
-	width: 100%;
-	padding: 4px;
+	line-height: 1;
+	margin: 0;
+	padding: 0.5em;
 }

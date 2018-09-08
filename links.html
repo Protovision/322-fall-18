@@ -1,70 +1,53 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="author" content="Mark Swoope">
 		<title>CSE 322: Links and Images</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" type="text/css" rel="stylesheet">
-		<link href="normalize.css" type="text/css" rel="stylesheet">
-		<link href="main.css" type="text/css" rel="stylesheet">
+		<link href="main.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
 			<nav>
-				<a href="index.html">Syllabus</a>
-				<a href="introduction.html">Introduction</a>
-				<a href="html.html">HTML</a>
-				<a href="formatting.html">Basic Formatting</a>
-				<a href="tables.html">Lists and Tables</a>
-				<a class="current" href="#">Links and Images</a>
-				<a href="resources.html">Resources</a>
+				<ul>
+					<li><a href="index.html">Syllabus</a></li>
+					<li><a href="introduction.html">Introduction</a></li>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="formatting.html">Basic Formatting</a></li>
+					<li><a href="tables.html">Lists and Tables</a></li>
+					<li><a class="current" href="#">Links and Images</a></li>
+					<li><a href="resources.html">Resources</a></li>
+				</ul>
 			</nav>
 		</header>
 		<main>
-			<h1>Links and Images</h1>
-
+			<header>
+				<h1>Links and Images</h1>
+			</header>
 			<p>The elements <tt>a</tt>, <tt>img</tt>, <tt>audio</tt>, and <tt>video</tt> can be used to insert links, images, audio, and video, respectively, in your webpage. They each require a set of <i>attributes</i>, each of which consists of a <i>name</i> and a <i>value</i>, controlling the how element works.</p>
-
 			<h3>Links</h3>
-
 			<p>An <tt>a</tt> element allows it's content to be clicked, resulting in the web browser visiting the URI specified by the element's <tt>href</tt> attribute, resulting in the resource identified by that URI being navigated to within the web browser or downloaded; in other words, an <tt>a</tt> element represents a link (the general term used for referring to a <i>hyperlink</i>).</p>
-
 			<p>The HTML code <tt>&lt;a href="https://www.csusb.edu/"&gt;CSUSB website&lt;/a&gt;</tt> displays as a <a href="https://www.csusb.edu/">CSUSB website</a>  link on this webpage.</p>
-
 			<p>One need not link to websites, the <tt>a</tt> element can also link directly to any kind of file such as a video or a PDF document. If capable, the contents of that file will be rendered within the web browser, otherwise the user has the option to download and possibly open that file with another application.</p>
-
 			<p>An optional <tt>download</tt> attribute may be specified, causing the resource to be downloaded (with the user's permission) rather than navigated to. No value is required for this attribute, except to override the name of the downloaded file.  The HTML code <tt>&lt;a href="song-01.mp3" download&gt;Download the song&lt;/a&gt;</tt> displays a link labeled "Download the song"; the web browser will not play the sound file in a new web browser context when the link is clicked, instead it will attempt to download the file.</p>
-
 			<h3>Images</h3>
-
 			<p>There is an image file named "duck.jpg" on this website, here is example HTML code to embed that image on this page:</p>
-
-			<code>
+<pre>
 &lt;img src="duck.jpg" alt="A yellow duckling" width="300" height="180"&gt;
-			</code>
-
+</pre>
 			<p>and here is the result:</p>
-
 			<img src="duck.jpg" alt="A yellow duckling" width="300" height="180">
-
 			<p>The attributes of this <tt>img</tt> element are:</p>
-
 			<ul>
 				<li><tt>src</tt>: The URI of the image. This is required.</li>
 				<li><tt>alt</tt>: Alternate text to use if the image cannot be displayed to the user. This is also required.</li>
 				<li><tt>width</tt>: The width, in pixels, to scale the image to. Not required but highly recommended.</li>
 				<li><tt>height</tt>: The height, in pixels, to scale the image to. Not required but also highly recommended.</li>
 			</ul>
-
 			<p><tt>img</tt> elements are empty, they have no closing tag.</p>
-
 			<p>If the file of the resource (in this case, an image resource) resides in the same file system location as the file of the web page, then the filename of the resource should be sufficient for the <tt>src</tt> attribute; otherwise, a relative or absolute URI should be used. This applies for all other elements that have a <tt>src</tt> attribute.</p> 
-
 			<p>The <tt>alt</tt> attribute requirement is not just for web browsers that fail to load the image, but also for users who may have visual impairment.</p>
-			
 			<p>Not specifying a <tt>width</tt> and <tt>height</tt> attribute will display the image at full size, possibly altering the layout of the web page if the image is too big.</p>
-
 			<p>An image can also be used as a button that links to another page by using it as the content of an <tt>a</tt> element; example: <tt>&lt;a href="index.html"&gt;&lt;img src="home.png" alt="Home" width="64" height="64"&gt;&lt;/a&gt;</tt>.</p>
 		</main>
 	</body>

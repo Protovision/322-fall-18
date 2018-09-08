@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="author" content="Mark Swoope">
 		<title>CSE 322: Lists and Tables</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" type="text/css" rel="stylesheet">
-		<link href="normalize.css" type="text/css" rel="stylesheet">
-		<link href="main.css" type="text/css" rel="stylesheet">
+		<link href="main.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
 			<nav>
-				<a href="index.html">Syllabus</a>
-				<a href="introduction.html">Introduction</a>
-				<a href="html.html">HTML</a>
-				<a href="formatting.html">Basic Formatting</a>
-				<a class="current" href="tables.html">Lists and Tables</a>
-				<a href="links.html">Links and Images</a>
-				<a href="resources.html">Resources</a>
+				<ul>
+					<li><a href="index.html">Syllabus</a></li>
+					<li><a href="introduction.html">Introduction</a></li>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="formatting.html">Basic Formatting</a></li>
+					<li><a class="current" href="tables.html">Lists and Tables</a></li>
+					<li><a href="links.html">Links and Images</a></li>
+					<li><a href="resources.html">Resources</a></li>
+				</ul>
 			</nav>
 		</header>
 		<main>
-			<h1>Lists and Tables</h1>
-
-			<code>
+			<header>
+				<h1>Lists and Tables</h1>
+			</header>
+<pre>
 &lt;ul&gt;
 	&lt;li&gt;An unordered list item&lt;/li&gt;
 	&lt;li&gt;Another unordered list item&lt;/li&gt;
 	&lt;li&gt;Yet another unordered list item&lt;/li&gt;
 &lt;/ul&gt;
-			</code>
+</pre>
 			<div class="html-example">
 				<ul>
 					<li>An unordered list item</li>
@@ -38,13 +38,13 @@
 					<li>Yet another unordered list item</li>
 				</ul>
 			</div>
-			<code>
+<pre>
 &lt;ol&gt;
 	&lt;li&gt;First ordered list item&lt;/li&gt;
 	&lt;li&gt;Second ordered list item&lt;/li&gt;
 	&lt;li&gt;Third ordered list item&lt;/li&gt;
 &lt;/ol&gt;
-			</code>
+</pre>
 			<div class="html-example">
 				<ol>
 					<li>First ordered list item</li>
@@ -52,7 +52,7 @@
 					<li>Third ordered list item</li>
 				</ol>
 			</div>
-			<code>
+<pre>
 &lt;ol&gt;
 	&lt;li&gt;
 		Ordered list item 1
@@ -71,7 +71,7 @@
 		&lt;/ul&gt;
 	&lt;/li&gt;
 &lt;/ol&gt;
-			</code>
+</pre>
 			<div class="html-example">
 				<ol>
 					<li>
@@ -92,14 +92,14 @@
 					</li>
 				</ol>
 			</div>
-			<code>
+<pre>
 &lt;table&gt;
 	&lt;tr&gt;&lt;th&gt;Header 1&lt;/th&gt;&lt;th&gt;Header 2&lt;/th&gt;&lt;/tr&gt;
 	&lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
 	&lt;tr&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;td&gt;Data 4&lt;/td&gt;&lt;/tr&gt;
 	&lt;tr&gt;&lt;td&gt;Data 5&lt;/td&gt;&lt;td&gt;Data 6&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
-			</code>
+</pre>
 			<div class="html-example">
 				<table>
 					<tr><th>Header 1</th><th>Header 2</th></tr>
@@ -107,7 +107,7 @@
 					<tr><td>Data 3</td><td>Data 4</td></tr>
 					<tr><td>Data 5</td><td>Data 6</td></tr>
 				</table>
-			</div>	
+			</div>
 		</main>
 	</body>
 </html>
