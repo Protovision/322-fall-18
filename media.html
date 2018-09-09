@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Mark Swoope">
+		<title>CSE 322: Links and Images</title>
+		<link href="main.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="index.html">Syllabus</a></li>
+					<li><a href="introduction.html">Introduction</a></li>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="formatting.html">Basic Formatting</a></li>
+					<li><a href="tables.html">Lists and Tables</a></li>
+					<li><a href="links.html">Links and Images</a></li>
+					<li><a class="current" href="#">Audio and Video</a></li>
+					<li><a href="resources.html">Resources</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<header>
+				<h1>Audio and Video</h1>
+			</header>
+			<p>The current standard of HTML enables one to embed audio and video into a website without using any third-party plugins.</p>
+			<audio 
+			controls
+			src="Rhapsody_in_B_minor.ogg"
+			style="display: block; width: 50%; border: thin solid;">
+				<p>HTML audio unsupported.</p>
+			</audio>
+			<details>
+				<summary>Audio details</summary>
+				<q>Rhapsody in B minor</q>, Op. 79 No. 1; composed by Johannes Brahms, performed by Muriel Nguyen Xuan, recorded by St&eacute;phane Magnenat, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+			</details>
+			<p>The above audio corresponds to the following HTML code:</p>
+<pre>
+&lt;audio controls src="Rhapsody_in_B_minor.ogg"&gt;
+	&lt;HTML audio unsupported.&gt;
+&lt;/audio&gt;
+</pre>
+			<p><tt>controls</tt> is an optional attribute that makes the audio controls (play, pause, seek, volume) visible. If not specified, the audio will be loaded but not visible or controllable to the user; this is desirable if one wishes to design a website with background music or user-event-triggered sound effects.</p>
+			<p>The value of the <tt>src</tt> attribute is the URI of the audio resource. In this case, the file named <q>Rhapsody_in_B_minor.ogg</q>, a file local to the server hosting this website, is used. The web browser must support at least three standard audio formats: MP3, WAV, and OGG.</p>
+			<p>The content of the <tt>audio</tt> element will only be displayed if the audio failed to load: reasons for this could be an unsupported audio format or the web browser not supporting the HTML &lt;audio&gt; tag.</p>
+			<p>Unless you own the media, it is a good idea to properly attribute the work to it's owner. This audio example includes audio details using the following HTML code:</p>
+<pre>
+&lt;details&gt;
+	&lt;summary&gt;Audio details&lt;summary&gt;
+	&lt;q&gt;Rhapsody in B minor&lt;/q&gt;, Op. 79. No. 1; composed by Johannes Brahms, performed by Muriel Nguyen Xuan, recorded by St&acute;phane Magnenat, licensed under &lt;a href="https://creativecommons.org/licenses/by-sa/4.0/"&gt;CC BY-SA 4.0&lt;/a&gt;.
+&lt;/details&gt;
+</pre>
+			<p>In this case, the CC BY-SA 4.0 license allows this audio to be freely distributed under the condition that the owners are properly attributed and the license is made visible.</p>
+			<p>The <tt>details</tt> element hides most of it's content while making the content of it's nested <tt>summary</tt> element visible as a heading; clicking the heading, toggles the visibility of the rest of the content.</p>
+			<p>The following element embeds the creative commons video <q>Big Buck Bunny</q>:</p>
+			<video
+			controls
+			width="640"
+			height="360"
+			src="Big_Buck_Bunny.mp4"
+			style="display: block; border: thin solid;"
+			>
+				<p>HTML video unsupported.</p>
+			</video>
+			<details>
+				<summary>Video details</summary>
+				<q>Big Buck Bunny</q>, &copy; Blender Foundation | <a href="https://www.bigbuckbunny.org">www.bigbuckbunny.org</a>, licensed under <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0</a>.
+			</details>
+			<p>The above element corresponds to the following HTML code:</p>
+<pre>
+&lt;video controls width="640" height="360" src="Big_Buck_Bunny.mp4"&gt;
+	&lt;p&gt;HTML video unsupported.&lt;/p&gt;
+&lt;/video&gt;
+</pre>
+			<p>The attributes <tt>width</tt> and <tt>height</tt> specify the width and height of the video in pixels. The <tt>controls</tt> attribute for <tt>video</tt>, if not present, will still display the video but without any direct way for the user to control it. The standard formats supported for the <tt>video</tt> <tt>src</tt> attribute are: MP4, WEBM, and OGG. In the event that the video could not be embedded, the content of the element will be displayed.</p>
+		</main>
+	</body>
+</html>
