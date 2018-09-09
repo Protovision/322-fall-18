@@ -60,7 +60,8 @@ body main ul {
 	padding: 0 1em 0 1em;
 	list-style-type: none;
 }
-body main ul li { display: block; padding: 0.25em; }*/
+body main ul li { display: block; padding: 0.25em; }
+*/
 body main table { 
 	border: thin solid; 
 	margin: 0; 
