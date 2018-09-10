@@ -93,3 +93,31 @@ body main tt {
 	margin: 0;
 	padding: 0.5em;
 }
+
+@media screen and (max-width: 600px) {
+	body header nav {
+		display: block;
+		position: static;
+		margin: 5%;
+		padding: 0;
+		width: 90%;
+	}
+	body header nav ul li {
+		display: block;
+		padding: 0.5em;
+	}
+	body header nav ul li a.current:before {
+		display: inline-block;
+		position: absolute;
+		content: "\25b6";
+		left: 0;
+	}
+	body main {
+		display: block;
+		position: static;
+		margin: 5%;
+		padding: 5%;
+		width: 80%;
+	}
+}
+
