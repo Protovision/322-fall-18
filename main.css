@@ -2,90 +2,42 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
 @import url("https://fonts.googleapis.com/css?family=PT+Mono");
 @import "normalize.css";
-:root {
-	--font-family: 'PT Sans', sans-serif;
-	--heading-font-family: 'PT Sans Caption', sans-serif;
-	--pre-tt-font-family: 'PT Mono', monospace;
-	--font-size: medium;
-	--line-height: 1.5;
-	--color: Black;
-	--a-color: SteelBlue;
-	--background-color: White;
-	--pre-tt-background-color: WhiteSmoke;
-}
 body {
-	font-family: var(--font-family);
-	font-size: var(--font-size);
-	line-height: var(--line-height);
-	color: var(--color);
-	background-color: var(--background-color);
 	margin: 0;
 	padding: 0;
+	font-family: 'PT Sans', sans-serif;
+	font-size: normal;
+	font-style: normal;
+	color: black;
+	background-color: white;
 }
-body header nav {
-	margin: 5% 0% 5% 5%;
-	padding: 0;
-	width: 20%;
-	position: absolute;
+h1,h2,h3,h4,h5,h6,th {
+	font-family: 'PT Sans Caption', sans-serif;
 }
-body header nav ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-body header nav ul li {
-	display: block;
-	padding: 0.5em 0.5em 0.5em 1.5em;
-}
-body header nav ul li a.current:before {
-	display: inline-block;
-	position: absolute;
-	content: "\25b6";
-	left: 0;
-}
-body main {
-	margin: 5% 5% 5% 20%;
-	padding: 0% 5% 0% 5%;
-	width: 65%;
-	height: 100%;
-	position: absolute;
-}
-a { text-decoration: none; color: var(--a-color); }
+a { color: SteelBlue; text-decoration: none; }
 a:hover { text-decoration: underline; }
-h1,h2,h3,h4,h5,h6 { font-family: var(--heading-font-family); }
-/*
-body main ul { 
-	display: block;
-	margin: 0; 
-	padding: 0 1em 0 1em;
-	list-style-type: none;
+code,kbd,samp,pre,tt {
+	font-family: 'PT Mono', monospace;
+	background-color: WhiteSmoke;
+	white-space: pre-wrap;
 }
-body main ul li { display: block; padding: 0.25em; }
-*/
-body main table { 
-	border: thin solid; 
-	margin: 0; 
-	padding: 0;
-	border-collapse: collapse;
-}
-body main table th,td { 
-	border: thin solid; 
-	margin: 0;
-	padding: 0.25em;
-}
-body main pre {
-	display: block;
+pre {
 	margin: 0;
 	padding: 0.5em;
 	border: thin solid;
-	font-family: var(--pre-tt-font-family);
-	background-color: var(--pre-tt-background-color);
-	white-space: pre-wrap;
 	line-height: 1;
 }
-body main tt {
-	font-family: var(--pre-tt-font-family);
-	background-color: var(--pre-tt-background-color);
+ul { list-style-type: circle; }
+table { 
+	margin: 0;
+	padding: 0;
+	border: thin solid; 
+	border-collapse: collapse;
+}
+table th,td {
+	margin: 0;
+	padding: 0.25em;
+	border: thin solid; 
 }
 .html-example {
 	border: thin solid;
@@ -93,34 +45,53 @@ body main tt {
 	margin: 0;
 	padding: 0.5em;
 }
-
-@media only screen and (orientation: portrait) {
-	body header nav {
-		display: block;
-		position: static;
-		margin: 5%;
-		padding: 0;
-		width: 90%;
-	}
-	body header nav ul li {
-		display: block;
-		padding: 0.5em;
-	}
-	body header nav ul li a.current:before {
-		display: inline-block;
-		position: absolute;
-		content: "\25b6";
-		left: 0;
-	}
-	body main {
-		display: block;
-		position: static;
-		margin: 5%;
-		padding: 5%;
-		width: 80%;
-	}
-	body {
-		font-size: large;
+body>header {
+	display: block;
+	margin: 0;
+	padding: 5% 5% 5% 5%;
+	width: 90%;
+	background-color: LightGray;
+}
+body>header>h1 {
+	margin: 0;
+	padding: 0.5em 0 0.5em 0;
+}
+body>header>hr {
+	color: White;
+	border: thin solid;
+}
+body>header>nav>ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+body>header>nav>ul>li {
+	padding: 1em 0 1em 0;
+	font-size: large;
+	font-weight: normal;
+	font-family: 'PT Sans Caption', sans-serif;
+}
+body>main {
+	display: block;
+	margin: 0;
+	padding: 5% 5% 5% 5%;
+	width: 90%;
+	line-height: 1.5;
+}
+@media print {
+	body>header {
+		display: none;
 	}
 }
-
+@media screen and (min-width: 800px) {
+	body>header {
+		width: 20%;
+		height: 100%;
+		position: fixed;
+	}
+	body>main {
+		margin: 0 0 0 30%;
+		width: 60%;
+		position: absolute;
+	}
+}
