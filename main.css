@@ -78,11 +78,6 @@ body>main {
 	width: 90%;
 	line-height: 1.5;
 }
-@media print {
-	body>header {
-		display: none;
-	}
-}
 @media screen and (min-width: 800px) {
 	body>header {
 		top: 0;
@@ -98,3 +93,9 @@ body>main {
 		position: absolute;
 	}
 }
+@media print {
+	body>header {
+		display: none;
+	}
+}
+
