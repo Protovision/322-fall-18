@@ -8,8 +8,8 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	font-size: normal;
 	font-style: normal;
-	color: black;
-	background-color: white;
+	color: Black;
+	background-color: White;
 }
 h1,h2,h3,h4,h5,h6,th {
 	font-family: 'PT Sans Caption', sans-serif;
@@ -18,7 +18,6 @@ a { color: SteelBlue; text-decoration: none; }
 a:hover { text-decoration: underline; }
 code,kbd,samp,pre,tt {
 	font-family: 'PT Mono', monospace;
-	background-color: WhiteSmoke;
 	white-space: pre-wrap;
 }
 pre {
@@ -66,7 +65,7 @@ body>header>nav>ul {
 	list-style-type: none;
 }
 body>header>nav>ul>li {
-	padding: 1em 0 1em 0;
+	padding: 1.0em 0 1.0em 0;
 	font-size: large;
 	font-weight: normal;
 	font-family: 'PT Sans Caption', sans-serif;
