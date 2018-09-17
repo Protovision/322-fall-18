@@ -12,9 +12,7 @@ h1,h2,h3,h4,h5,h6,th {
 }
 a { color: SteelBlue; text-decoration: none; }
 a:hover { text-decoration: underline; }
-code,kbd,samp,pre {
-	font-family: 'PT Mono', monospace;
-}
+code,kbd,samp,pre { font-family: 'PT Mono', monospace; }
 figure {
 	border: thin solid;
 	margin: 0;
@@ -33,11 +31,18 @@ table th,td {
 	padding: 0.25em;
 	border: thin solid; 
 }
-.html-example {
+body>main>article nav {
+	display: inline-block;
 	border: thin solid;
-	line-height: 1;
+	padding: 1em;
+}
+body>main>article nav ul {
 	margin: 0;
-	padding: 0.5em;
+	padding-left: 1em;
+	list-style-type: none;
+}
+body>main>article nav ul li {
+	padding: 0.25em;
 }
 body>header {
 	display: block;

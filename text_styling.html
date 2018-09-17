@@ -22,6 +22,7 @@
 					<li><a href="tables.html">Lists and Tables</a></li>
 					<li><a href="links.html">Links and Images</a></li>
 					<li><a href="media.html">Audio and Video</a></li>
+					<li><a href="semantic_text.html">Semantic Text</a></li>
 					<li><a href="css.html">CSS</a></li>
 					<li><a class="current" href="#">Text Styling</a></li>
 					<li><a href="resources.html">Resources</a></li>
@@ -33,45 +34,6 @@
 				<header>
 					<h1>Text Styling</h1>
 				</header>
-				<h3>Text-level semantics</h3>
-				<p>The meaning of the <code>i</code>, <code>b</code>, and <code>s</code> elements were historically italic, bold, and strikethrough text; however these meanings have changed in recent decades and even though many web browsers render these elements with these same effects, one should not rely on this behavior and one should be familiar with the other text formatting elements that can be more appropriate in specific situtations.</p>
-				<p>The following list describes a more comprehensive list of the <a href="https://www.w3.org/TR/html/textlevel-semantics.html">HTML elements for text-level semantics</a> you should be aware of. These descriptions are quoted from the source linked to from the previous sentence. When testing these elements, pay more attention to their meaning rather than their appearance; their appearance can always be changed using CSS.</p>
-				<dl>
-					<dt><code>em</code></dt>
-					<dd><q>The <code>&lt;em&gt;</code> element represents stress emphasis of its contents.</q></dd>
-					<dt><code>strong</code></dt>
-					<dd><q>The <code>&lt;strong&gt;</code> element represents strong importance, seriousness, or urgency for its contents.</q></dd>
-					<dt><code>small</code></dt>
-					<dd><q>The <code>&lt;small&gt;</code> element represents side comments such as small print.</q></dd>
-					<dt><code>s</code></dt>
-					<dd><q>The <code>&lt;s&gt;</code> element represents contents that are no longer accurate or no longer relevant.</q></dd>
-					<dt><code>cite</code></dt>
-					<dd><q>The <code>&lt;cite&gt;</code> element represents a reference to a creative work. It must include the title of the work or the name of the author (person, people or organization) or an URL reference, ora reference in abbreviated form as per the conventions used for the addition of citation metadata.</q></dd>
-					<dt><code>q</code></dt>
-					<dd><q>The <code>&lt;q&gt;</code> element represents some phrasing content quoted from another source.</q></dd>
-					<dt><code>dfn</code></dt>
-					<dd><q>The <code>&lt;dfn&gt;</code> element represents the defining instance of a term. The term-description group, <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code> or <code>&lt;section&gt;</code> element that is the nearest ancestor of the <code>&lt;dfn&gt;</code> element must also contain the definition(s) for the term given by the <code>&lt;dfn&gt;</code> element.</q></dd>
-					<dt><code>abbr</code></dt>
-					<dd><q>The <code>&lt;abbr&gt;</code> element represents an abbreviation or acronym, optionally with its expansion. The <code>title</code> attribute may be used to provide an expansion of the abbreviation. The attribute, if specified, must contain an expansion of the abbreviation, and nothing else.</q></dd>
-					<dt><code>code</code></dt>
-					<dd><q>The <code>&lt;code&gt;</code> element represents a fragment of computer code. This could be an XML element name, a file name, a computer program, or any other string that a computer would recognize.</q></dd>
-					<dt><code>var</code></dt>
-					<dd><q>The <code>&lt;var&gt;</code> element represents a variable. This could be an actual variable in a mathematical expression or a programming context, an identifier representing a constant, a symbol identifying a physical quantity, a function parameter, or just a term used as a placeholder in prose.</q></dd>
-					<dt><code>samp</code></dt>
-					<dd><q>The <code>&lt;samp&gt;</code> element represents sample or quoted output from another program or computing system.</dd>
-					<dt><code>kbd</code></dt>
-					<dd><q>The <code>&lt;kbd&gt;</code> element represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).</q></dd>
-					<dt><code>sub</code> and <code>sup</code></dt>
-					<dd><q>The <code>&lt;sub&gt;</code> element represents a subscript, and the <code>&lt;sup&gt;</code> element represents a superscript.</dd>
-					<dt><code>i</code></dt>
-					<dd><q>The <code>&lt;i&gt;</code> element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text, such as taxonomic designation, a technical term, an idiomatic phrase from another language, transliteration, a thought or a ship name in Western texts.</q></dd>
-					<dt><code>b</code></dt>
-					<dd><q>The <code>&lt;b&gt;</code> element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede.</q></dd>
-					<dt><code>mark</code></dt>
-					<dd><q>The <code>&lt;mark&gt;</code> element represents a run of text in one document marked or highlighted for reference purposes, due to its relevance in another context.</dd>
-				</dl>
-				<p>Each of these HTML elements have default CSS styling applied by the web browser; this default styling, with some being exactly the same across all major web browsers, is not standard and still specific to the web browser being used. One should not always assume that an <code>&lt;i&gt;</code> element produces italicized text or that a <code>&lt;b&gt;</code> element produces bold text. The false impression of the contrary was given in the former article on basic formatting for simplicity and educational purposes, but is ultimately wrong, sorry. <code>&lt;i&gt;</code> <i>used</i> to mean italic, <code>&lt;b&gt;</code> <i>used</i> to mean bold, and <code>&lt;s&gt;</code> <i>used</i> to mean strikethrough; but newer versions of HTML have largely done away with aesthetic specifics, delegating that to CSS while focusing more on semantics. All of this reflects the separation between the <i>structure</i> of a web document and it's <i>presentation</i>.</p>
-
 				<!-- color, background-color, line-height, text-align, white-space, text-decoration, font-family, font-size, font-style, font-weight -->
 				<h3>Colors</h3>
 				<p><code>color</code> and <code>background-color</code> sets the foreground and background color of an element, respectively. Their values can be expressed in many formats, including: hexadecimal, RGBA, and HSLA format. In addition, there are several <a href="https://www.w3schools.com/colors/colors_hex.asp">standard color names</a> which map to particular hexadecimal color values.</p>

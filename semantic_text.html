@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Mark Swoope">
+		<title>CSE 322: Semantic Text</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header>
+			<h1>CSE 322: Fall 2018<br>CSUSB</h1>
+			<hr>
+			<nav>
+				<ul>
+					<li><a href="index.html">Syllabus</a></li>
+					<li><a href="introduction.html">Introduction</a></li>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="formatting.html">Basic Formatting</a></li>
+					<li><a href="tables.html">Lists and Tables</a></li>
+					<li><a href="links.html">Links and Images</a></li>
+					<li><a href="media.html">Audio and Video</a></li>
+					<li><a class="current" href="#">Semantic Text</a></li>
+					<li><a href="css.html">CSS</a></li>
+					<li><a href="text_styling.html">Text Styling</a></li>
+					<li><a href="resources.html">Resources</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<article>
+				<header>
+					<h1>Semantic Text</h1>
+				</header>
+				<nav>
+					<b>Table of Contents</b>
+					<ul>
+						<li><a href="#intro">Introduction</a></li>
+						<li><a href="#i">The <code>&lt;i&gt;</code> element</a></li>
+						<li><a href="#em">The <code>&lt;em&gt;</code> element</a></li>
+						<li><a href="#cite">The <code>&lt;cite&gt;</code> element</a></li>
+						<li><a href="#dfn">The <code>&lt;dfn&gt;</code> element</a></li>
+						<li><a href="#abbr">The <code>&lt;abbr&gt;</code> element</a></li>
+						<li><a href="#b">The <code>&lt;b&gt;</code> element</a></li>
+						<li><a href="#strong">The <code>&lt;strong&gt;</code> element</a></li>
+						<li><a href="#mark">The <code>&lt;mark&gt;</code> element</a></li>
+						<li><a href="#s">The <code>&lt;s&gt;</code> element</a></li>
+					</ul>
+				</nav>
+				<section id="intro">
+					<h3>Introduction</h3>
+					<p>In the <a href="formatting.html">Basic formatting</a> article, it was said that the <code>&lt;i&gt;</code>, <code>&lt;b&gt;</code>, and <code>&lt;s&gt;</code> elements represent italic text, bold text, and strikethrough text, respectively. This was true, but not anymore. Newer standards of HTML have redefined the meaning of these elements. The meaning of these elements are now oriented towards their content rather than their appearance. The main idea when using HTML is to focus on the content of the website while worrying about the appearance later when you start using CSS.</p>
+				</section>
+				<section id="i">
+					<h3>The <code>&lt;i&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-i-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.22</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;i&gt;</code> element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text, such as a taxonomic designation, a technical term, an idiomatic phrase from another language, transliteration, a thought, or a ship name in Western texts.</p>
+						</blockquote>
+					</figure>
+					<p><code>&lt;i&gt;</code> is a very general element that can be used for terms, names, titles of works, titles of nobility, foreign words, foreign phrases, thoughts, or emphasis. Here are some examples of it's use:</p>
+					<p>For use with the name of something:</p>
+					<figure>
+						<code>The name of the ship was &lt;i&gt;Destiny&lt;/i&gt;.</code>
+					</figure>
+					<p>For use with a term:</p>
+					<figure>
+						<code>&lt;i&gt;bandwidth&lt;/i&gt; refers to the maximum amount of data that can be transmitted on a given path per unit of time.</code>
+					</figure>
+					<p>For use with a thought:</p>
+					<figure>
+						<code>She thought to herself &lt;i&gt;Where did the jar of cookies go?&lt;/i&gt;</code>
+					</figure>
+					<p>For use with a foreign word or phrase:</p>
+					<figure>
+						<code>The tempo of the raffle entries coming in was &lt;i&gt;prestissimo&lt;/i&gt;.</code>
+					</figure>
+					<p>For use with the title of a book, song, or movie:</p>
+					<figure>
+						<code>I love &lt;i&gt;Men in Black&lt;/i&gt;!</code>
+					</figure>
+				</section>
+				<section id="em">
+					<h3>The <code>&lt;em&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-cite-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.6</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;em&gt;</code> element represents stress emphasis of its contents.</p>
+						</blockquote>
+					</figure>
+					<p><code>&lt;em&gt;</code> is more specific than it's more general <code>&lt;i&gt;</code> relative, it is strictly for stress emphasis of a word or phrase and nothing more, thus it is more preferred than <code>&lt;i&gt;</code> if stress emphasis is all you need. Example:</p>
+					<figure>
+						<code>Just &lt;em&gt;do&lt;/em&gt; it!</code>
+					</figure>
+				</section>
+				<section id="cite">
+					<h3>The <code>&lt;cite&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-em-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.2</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;cite&gt;</code> element represents a reference to a creative work. It must include the title of the work or the name of the author (person, people or organization) or an URL reference, or a reference in abbreviated form as per the conventions used for the addition of citation metadata.</p>
+						</blockquote>
+					</figure>
+					<p><code>&lt;cite&gt;</code> is also preferred over <code>&lt;i&gt;</code> specifically for titles of creative works. Despite the quote above from W3C, using this tag for or with an author's name is disputed by the other HTML standard maintained by WHATWG.</p>
+					<p>Example use for a title of a creative work:</p>
+					<figure>
+						<code>Gerard Butler played the main character of &lt;cite&gt;Gladiator&lt;/cite&gt;.</code>
+					</figure>
+				</section>
+				<section id="dfn">
+					<h3>The <code>&lt;dfn&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-dfn-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.8</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;dfn&gt;</code> element represents the defining instance of a term. The term-description group, <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, or <code>&lt;section&gt;</code> element that is the nearest ancestor of the <code>&lt;dfn&gt;</code> element must also contain the definition(s) for the term given by the <code>&lt;dfn&gt;</code> element.</p>
+						</blockquote>
+					</figure>
+					<p>This element is preferred over <code>&lt;i&gt;</code> for use with a term that is being defined.</p>
+					<figure>
+						<code>&lt;dfn&gt;HyperText Markup Language&lt;/dfn&gt; is a computer language for describing the structure of web pages.</code>
+					</figure>
+					<p>When used in the above way, the content of the element must contain the exact word or phase being defined and nothing else. Alternatively, an acronym can be used as the content, in which case the value of the element's <code>title</code> attribute must be the exact word or phrase that's being defined:</p>
+					<figure>
+						<code>&lt;dfn title="HyperText Markup Language"&gt;HTML&lt;/dfn&gt; is a computer language for describing the structure of web pages.</code>
+					</figure>
+					<p>When used in this way, many web browsers will display the title of the definition's acronym in a tooltip when the element is hovered over. It is important that the definition of the term be found immediately outside the element, within the enclosing paragraph or list item.</p>
+				</section>
+				<section id="abbr">
+					<h3>The <code>&lt;abbr&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-abbr-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.9</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;abbr&gt;</code> element represents an abbreviation or acronym, optionally with its expansion. The <code>title</code> attribute may be used to provide an expansion of the abbreviation. The attribute, if specified, must contain an expansion of the abbreviation, and nothing else.</p>
+						</blockquote>
+					</figure>
+					<p>This element represents an abbreviation whose expansion is not necessarily being defined as one is doing while using the <code>&lt;dfn&gt;</code> element. Example:</p>
+					<figure>
+						<code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; was first introduced in 1996.</code>
+					</figure>
+				</section>
+				<section id="b">
+					<h3>The <code>&lt;b&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-b-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.23</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;b&gt;</code> element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede.</p>
+						</blockquote>
+					</figure>
+					<p>This element shouldn't be used for stress emphasis (use <code>&lt;em&gt;</code> for that), importance (use <code>&lt;strong&gt;</code> for that), heading text (use the <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> elements for that), or alternate voice/mood (use <code>&lt;i&gt;</code> for that). It should just be used to make text more visible, while not affecting the tone or tempo of the text when read out loud.</p>
+					<p>Example for use in an opening sentence of an article:</p>
+					<figure>
+						<code>&lt;b&gt;It was a quarter past midnight&lt;/b&gt; when a fiery object streaked across the sky.</code>
+					</figure>
+					<p>Example for bringing attention to offered products or services:</p>
+					<figure>
+						<code>Buy our new &lt;b&gt;Peppermint Latte&lt;/b&gt; and get a &lt;b&gt;Chocolate Chip Cookie&lt;/b&gt; free!</code>
+					</figure>
+					<p>Example for bringing attention to an action in interactive software:</p>
+					<figure>
+						<code>Press &lt;b&gt;E&lt;/b&gt; to pick up.</code>
+					</figure>
+				</section>
+				<section id="strong">
+					<h3>The <code>&lt;strong&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-strong-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.3</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;strong&gt;</code> element represents strong importance, seriousness, or urgency for its contents.</p>
+						</blockquote>
+					</figure>
+					<p>This element is recommended over <code>&lt;b&gt;</code> for scenarios illustrated by the following examples.</p>
+					<p>For seriousness:</p>
+					<figure>
+						<code>&lt;strong&gt;Lock the door&lt;/strong&gt; before leaving.</code>
+					</figure>
+					<p>For importance apart from other details:</p>
+					<figure>
+						<code>Chapter 3: &lt;strong&gt;The Internet&lt;/strong&gt; and it's other early predecessors</code>
+					</figure>
+					<p>For use as a warning label:</p>
+					<figure>
+						<code>&lt;strong&gt;Warning:&lt;/strong&gt; Don't try this at home.</code>
+					</figure>
+				</section>
+				<section id="mark">
+					<h3>The <code>&lt;mark&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-mark-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.25</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;mark&gt;</code> element represents a run of text in one document marked or highlighted for reference purposes, due to its relevance in another context. When used in a quotation or block of text referred to from the prose, it indicates a highlight that was not originally present but which has been added to bring the reader's attention to a part of the text that might not have been considered important by the original author when the block was originally written, but which is now under proviously unexpected scrutiny. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its likely relevance to the user's current activity.</p>
+						</blockquote>
+					</figure>
+					<p>Example when highlighting a part of a code fragment:</p>
+					<figure>
+						<code>The highlighted portion shows the mistake in the code: &lt;code&gt;if (n == 2)&lt;mark&gt;;&lt;/mark&gt; f(n);&lt;/code&gt;</code>
+					</figure>
+					<p>Example when highlighting something relevant from an originally unmarked text:</p>
+					<figure>
+						<code>&lt;p&gt;Madison briefly stated the two solutions in Federalist No. 10:&lt;/p&gt;<br>&lt;blockquote&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;There are two methods of curing the mischiefs of faction: the one, by &lt;mark&gt;removing its causes&lt;/mark&gt;; the other, by &lt;mark&gt;controlling its effects&lt;/mark&gt;.&lt;/p&gt;<br>&lt;/blockquote&gt;<br></code>
+					</figure>
+				</section>
+				<section id="s">
+					<h3>The <code>&lt;s&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-s-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.5</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;s&gt;</code> element represents contents that are no longer accurate or no longer relevant.</p>
+						</blockquote>
+					</figure>
+				</section>
+			</article>
+		</main>
+	</body>
+</html>
