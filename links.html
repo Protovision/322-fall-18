@@ -5,7 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Mark Swoope">
 		<title>CSE 322: Links and Images</title>
-		<link href="main.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header>
@@ -27,34 +29,36 @@
 			</nav>
 		</header>
 		<main>
-			<header>
-				<h1>Links and Images</h1>
-			</header>
-			<p>The elements <tt>a</tt>, <tt>img</tt>, <tt>audio</tt>, and <tt>video</tt> can be used to insert links, images, audio, and video, respectively, in your webpage. They each require a set of <i>attributes</i>, each of which consists of a <i>name</i> and a <i>value</i>, controlling the how element works.</p>
-			<h3>Links</h3>
-			<p>An <tt>a</tt> element allows it's content to be clicked, resulting in the web browser visiting the URI specified by the element's <tt>href</tt> attribute, resulting in the resource identified by that URI being navigated to within the web browser or downloaded; in other words, an <tt>a</tt> element represents a link (the general term used for referring to a <i>hyperlink</i>).</p>
-			<p>The HTML code <tt>&lt;a href="https://www.csusb.edu/"&gt;CSUSB website&lt;/a&gt;</tt> displays as a <a href="https://www.csusb.edu/">CSUSB website</a>  link on this webpage.</p>
-			<p>One need not link to websites, the <tt>a</tt> element can also link directly to any kind of file such as a video or a PDF document. If capable, the contents of that file will be rendered within the web browser, otherwise the user has the option to download and possibly open that file with another application.</p>
-			<p>An optional <tt>download</tt> attribute may be specified, causing the resource to be downloaded (with the user's permission) rather than navigated to. No value is required for this attribute, except to override the name of the downloaded file.  The HTML code <tt>&lt;a href="song-01.mp3" download&gt;Download the song&lt;/a&gt;</tt> displays a link labeled "Download the song"; the web browser will not play the sound file in a new web browser context when the link is clicked, instead it will attempt to download the file.</p>
-			<h3>Images</h3>
-			<p>There is an image file named "duck.jpg" on this website, here is example HTML code to embed that image on this page:</p>
-<pre>
-&lt;img src="duck.jpg" alt="A yellow duckling" width="300" height="180"&gt;
-</pre>
-			<p>and here is the result:</p>
-			<img src="duck.jpg" alt="A yellow duckling" width="300" height="180">
-			<p>The attributes of this <tt>img</tt> element are:</p>
-			<ul>
-				<li><tt>src</tt>: The URI of the image. This is required.</li>
-				<li><tt>alt</tt>: Alternate text to use if the image cannot be displayed to the user. This is also required.</li>
-				<li><tt>width</tt>: The width, in pixels, to scale the image to. Not required but highly recommended.</li>
-				<li><tt>height</tt>: The height, in pixels, to scale the image to. Not required but also highly recommended.</li>
-			</ul>
-			<p><tt>img</tt> elements are empty, they have no closing tag.</p>
-			<p>If the file of the resource (in this case, an image resource) resides in the same file system location as the file of the web page, then the filename of the resource should be sufficient for the <tt>src</tt> attribute; otherwise, a relative or absolute URI should be used. This applies for all other elements that have a <tt>src</tt> attribute.</p> 
-			<p>The <tt>alt</tt> attribute requirement is not just for web browsers that fail to load the image, but also for users who may have visual impairment.</p>
-			<p>Not specifying a <tt>width</tt> and <tt>height</tt> attribute will display the image at full size, possibly altering the layout of the web page if the image is too big.</p>
-			<p>An image can also be used as a button that links to another page by using it as the content of an <tt>a</tt> element; example: <tt>&lt;a href="index.html"&gt;&lt;img src="home.png" alt="Home" width="64" height="64"&gt;&lt;/a&gt;</tt>.</p>
+			<article>
+				<header>
+					<h1>Links and Images</h1>
+				</header>
+				<p>The elements <code>a</code>, <code>img</code>, <code>audio</code>, and <code>video</code> can be used to insert links, images, audio, and video, respectively, in your webpage. They each require a set of <i>attributes</i>, each of which consists of a <i>name</i> and a <i>value</i>, controlling the how element works.</p>
+				<h3>Links</h3>
+				<p>An <code>a</code> element allows it's content to be clicked, resulting in the web browser visiting the URI specified by the element's <code>href</code> attribute, resulting in the resource identified by that URI being navigated to within the web browser or downloaded; in other words, an <code>a</code> element represents a link (the general term used for referring to a <i>hyperlink</i>).</p>
+				<p>The HTML code <code>&lt;a href="https://www.csusb.edu/"&gt;CSUSB website&lt;/a&gt;</code> displays as a <a href="https://www.csusb.edu/">CSUSB website</a>  link on this webpage.</p>
+				<p>One need not link to websites, the <code>a</code> element can also link directly to any kind of file such as a video or a PDF document. If capable, the contents of that file will be rendered within the web browser, otherwise the user has the option to download and possibly open that file with another application.</p>
+				<p>An optional <code>download</code> attribute may be specified, causing the resource to be downloaded (with the user's permission) rather than navigated to. No value is required for this attribute, except to override the name of the downloaded file.  The HTML code <code>&lt;a href="song-01.mp3" download&gt;Download the song&lt;/a&gt;</code> displays a link labeled "Download the song"; the web browser will not play the sound file in a new web browser context when the link is clicked, instead it will attempt to download the file.</p>
+				<h3>Images</h3>
+				<p>There is an image file named "duck.jpg" on this website, here is example HTML code to embed that image on this page:</p>
+				<figure>
+					<code>&lt;img src="duck.jpg" alt="A yellow duckling" width="300" height="180"&gt;</code>
+				</figure>
+				<p>and here is the result:</p>
+				<img src="duck.jpg" alt="A yellow duckling" width="300" height="180">
+				<p>The attributes of this <code>img</code> element are:</p>
+				<ul>
+					<li><code>src</code>: The URI of the image. This is required.</li>
+					<li><code>alt</code>: Alternate text to use if the image cannot be displayed to the user. This is also required.</li>
+					<li><code>width</code>: The width, in pixels, to scale the image to. Not required but highly recommended.</li>
+					<li><code>height</code>: The height, in pixels, to scale the image to. Not required but also highly recommended.</li>
+				</ul>
+				<p><code>img</code> elements are empty, they have no closing tag.</p>
+				<p>If the file of the resource (in this case, an image resource) resides in the same file system location as the file of the web page, then the filename of the resource should be sufficient for the <code>src</code> attribute; otherwise, a relative or absolute URI should be used. This applies for all other elements that have a <code>src</code> attribute.</p> 
+				<p>The <code>alt</code> attribute requirement is not just for web browsers that fail to load the image, but also for users who may have visual impairment.</p>
+				<p>Not specifying a <code>width</code> and <code>height</code> attribute will display the image at full size, possibly altering the layout of the web page if the image is too big.</p>
+				<p>An image can also be used as a button that links to another page by using it as the content of an <code>a</code> element; example: <code>&lt;a href="index.html"&gt;&lt;img src="home.png" alt="Home" width="64" height="64"&gt;&lt;/a&gt;</code>.</p>
+			</article>
 		</main>
 	</body>
 </html>

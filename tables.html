@@ -5,7 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Mark Swoope">
 		<title>CSE 322: Lists and Tables</title>
-		<link href="main.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header>
@@ -27,113 +29,78 @@
 			</nav>
 		</header>
 		<main>
-			<header>
-				<h1>Lists and Tables</h1>
-			</header>
-<pre>
-&lt;ul&gt;
-	&lt;li&gt;An unordered list item&lt;/li&gt;
-	&lt;li&gt;Another unordered list item&lt;/li&gt;
-	&lt;li&gt;Yet another unordered list item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-			<div class="html-example">
-				<ul>
-					<li>An unordered list item</li>
-					<li>Another unordered list item</li>
-					<li>Yet another unordered list item</li>
-				</ul>
-			</div>
-<pre>
-&lt;ol&gt;
-	&lt;li&gt;First ordered list item&lt;/li&gt;
-	&lt;li&gt;Second ordered list item&lt;/li&gt;
-	&lt;li&gt;Third ordered list item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
-			<div class="html-example">
-				<ol>
-					<li>First ordered list item</li>
-					<li>Second ordered list item</li>
-					<li>Third ordered list item</li>
-				</ol>
-			</div>
-<pre>
-&lt;dl&gt;
-	&lt;dt&gt;Description list term 1&lt;/dt&gt;
-	&lt;dd&gt;Description list description 1&lt;/dd&gt;
-	&lt;dt&gt;Description list term 2&lt;/dt&gt;
-	&lt;dd&gt;Description list description 2&lt;/dd&gt;
-	&lt;dt&gt;Description list term 3&lt;/dt&gt;
-	&lt;dd&gt;Description list description 3&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
-			<div class="html-example">
-				<dl>
-					<dt>Description list term 1</dt>
-					<dd>Description list description 1</dd>
-					<dt>Description list term 2</dt>
-					<dd>Description list description 2</dd>
-					<dt>Description list term 3</dt>
-					<dd>Description list description 3</dd>
-				</dl>
-			</div>
-<pre>
-&lt;ol&gt;
-	&lt;li&gt;
-		Ordered list item 1
-		&lt;ol&gt;
-			&lt;li&gt;Nested ordered list item 1&lt;/li&gt;
-			&lt;li&gt;Nested ordered list item 2&lt;/li&gt;
-		&lt;/ol&gt;
-	&lt;/li&gt;
-	&lt;li&gt;Ordered list item 2&lt;/li&gt;
-	&lt;li&gt;
-		Ordered list item 3
-		&lt;ul&gt;
-			&lt;li&gt;Nested unordered list item 1&lt;/li&gt;
-			&lt;li&gt;Nested unordered list item 2&lt;/li&gt;
-			&lt;li&gt;Nested unordered list item 3&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
-			<div class="html-example">
-				<ol>
-					<li>
-						Ordered list item 1
-						<ol>
-							<li>Nested ordered list item 1</li>
-							<li>Nested ordered list item 2</li>
-						</ol>
-					</li>
-					<li>Ordered list item 2</li>
-					<li>
-						Ordered list item 3
-						<ul>
-							<li>Nested unordered list item 1</li>
-							<li>Nested unordered list item 2</li>
-							<li>Nested unordered list item 3</li>
-						</ul>
-					</li>
-				</ol>
-			</div>
-<pre>
-&lt;table&gt;
-	&lt;tr&gt;&lt;th&gt;Header 1&lt;/th&gt;&lt;th&gt;Header 2&lt;/th&gt;&lt;/tr&gt;
-	&lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
-	&lt;tr&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;td&gt;Data 4&lt;/td&gt;&lt;/tr&gt;
-	&lt;tr&gt;&lt;td&gt;Data 5&lt;/td&gt;&lt;td&gt;Data 6&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-</pre>
-			<div class="html-example">
-				<table>
-					<tr><th>Header 1</th><th>Header 2</th></tr>
-					<tr><td>Data 1</td><td>Data 2</td></tr>
-					<tr><td>Data 3</td><td>Data 4</td></tr>
-					<tr><td>Data 5</td><td>Data 6</td></tr>
-				</table>
-			</div>
+			<article>
+				<header>
+					<h1>Lists and Tables</h1>
+				</header>
+				<figure>
+					<code>&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;An unordered list item&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Another unordered list item&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Yet another unordered list item&lt;/li&gt;<br>&lt;/ul&gt;<br></code>
+				</figure>
+				<figure>
+					<ul>
+						<li>An unordered list item</li>
+						<li>Another unordered list item</li>
+						<li>Yet another unordered list item</li>
+					</ul>
+				</figure>
+				<figure>
+					<code>&lt;ol&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;First ordered list item&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Second ordered list item&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Third ordered list item&lt;/li&gt;<br>&lt;/ol&gt;<br></code>
+				</figure>
+				<figure>
+					<ol>
+						<li>First ordered list item</li>
+						<li>Second ordered list item</li>
+						<li>Third ordered list item</li>
+					</ol>
+				</figure>
+				<figure>
+					<code>&lt;dl&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Description list term 1&lt;/dt&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Description list description 1&lt;/dd&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Description list term 2&lt;/dt&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Description list description 2&lt;/dd&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Description list term 3&lt;/dt&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Description list description 3&lt;/dd&gt;<br>&lt;/dl&gt;</code>
+				</figure>
+				<figure>
+					<dl>
+						<dt>Description list term 1</dt>
+						<dd>Description list description 1</dd>
+						<dt>Description list term 2</dt>
+						<dd>Description list description 2</dd>
+						<dt>Description list term 3</dt>
+						<dd>Description list description 3</dd>
+					</dl>
+				</figure>
+				<figure>
+					<code>&lt;ol&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ordered list item 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Nested ordered list item 1&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Nested ordered list item 2&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Ordered list item 2&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ordered list item 3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Nested unordered list item 1&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Nested unordered list item 2&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Nested unordered list item 3&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>&lt;/ol&gt;</code>
+				</figure>
+				<figure>
+					<ol>
+						<li>
+							Ordered list item 1
+							<ol>
+								<li>Nested ordered list item 1</li>
+								<li>Nested ordered list item 2</li>
+							</ol>
+						</li>
+						<li>Ordered list item 2</li>
+						<li>
+							Ordered list item 3
+							<ul>
+								<li>Nested unordered list item 1</li>
+								<li>Nested unordered list item 2</li>
+								<li>Nested unordered list item 3</li>
+							</ul>
+						</li>
+					</ol>
+				</figure>
+				<figure>
+					<code>&lt;table&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;Header 1&lt;/th&gt;&lt;th&gt;Header 2&lt;/th&gt;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;td&gt;Data 4&lt;/td&gt;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Data 5&lt;/td&gt;&lt;td&gt;Data 6&lt;/td&gt;&lt;/tr&gt;<br>&lt;/table&gt;</code>
+				</figure>
+				<figure>
+					<table>
+						<tr><th>Header 1</th><th>Header 2</th></tr>
+						<tr><td>Data 1</td><td>Data 2</td></tr>
+						<tr><td>Data 3</td><td>Data 4</td></tr>
+						<tr><td>Data 5</td><td>Data 6</td></tr>
+					</table>
+				</figure>
+			</article>
 		</main>
 	</body>
 </html>

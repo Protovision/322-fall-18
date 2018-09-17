@@ -5,7 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Mark Swoope">
 		<title>CSE 322: Basic Formatting</title>
-		<link href="main.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header>
@@ -27,76 +29,57 @@
 			</nav>
 		</header>
 		<main>
-			<header>
-				<h1>Basic Formatting</h1>
-			</header>
-			<p>Most HTML elements follow the form <tt>&lt;TAG&gt;CONTENT&lt;/TAG&gt;</tt>, thus creating an HTML-only web page is only a matter of remembering the names and meanings of common tags.</p>
-			<h3>Headings, paragraphs, and text emphasis</h3>
-			<p>You should already know that the <tt>p</tt> element displays it's content as a paragraph by placing it on a new line with a small amount of space inserted before and after it.</p>
-			<p>Another useful set of elements includes the heading elements: <tt>h1</tt>, <tt>h2</tt>, <tt>h3</tt>, <tt>h4</tt>, <tt>h5</tt>, and <tt>h6</tt>. They display their content as a heading, with large and bold font; heading elements should be used outside of paragraph elements.</p>
-			<p>Observe HTML code below and it's proceeding result:</p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;A title&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;A heading&lt;/h1&gt;
-		&lt;p&gt;A paragraph.&lt;/p&gt;
-		&lt;h2&gt;A subheading&lt;/h2&gt;
-		&lt;h3&gt;A subsubheading&lt;/h3&gt;
-		&lt;p&gt;Another paragraph.&lt;/p&gt;
-		&lt;p&gt;Yet another paragraph.&lt;/p&gt;
-		&lt;p&gt;A paragraph with &lt;i&gt;italicized text&lt;/i&gt;, &lt;b&gt;bold text&lt;/b&gt;, and &lt;s&gt;strikethrough text&lt;/s&gt;.&lt;/p&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-			<div class="html-example">
-				<h1>A heading</h1>
-				<p>A paragraph.</p>
-				<h2>A subheading</h2>
-				<h3>A subsubheading</h2>
-				<p>Another paragraph.</p>
-				<p>Yet another paragraph.</p>
-				<p>A paragraph with <i>italicized text</i>, <b>bold text</b>, and <s>strikethrough text</s>.</p>
-			</div>
-			<p>As one can induce, <tt>h1</tt> produces the largest heading and all subsequent heading elements produce smaller headings.</p>
-			<p>The last paragraph demonstrates the effect of <tt>i</tt>, <tt>b</tt>, and <tt>s</tt> elements. By default, these elements produce italicized, bold, and strikethrough text respectively. These three elements can be nested to apply mixed formatting to the same content; for example <tt>&lt;i&gt;&lt;b&gt;&lt;s&gt;hello world&lt;/s&gt;&lt;/b&gt;&lt;/i&gt;</tt> produces <i><b><s>hello world</s></b></i> on this web page.</p>
-			<h3>Block-level elements and inline elements</h3>
-			<p><a href="https://www.w3.org/TR/html401/struct/global.html#h-7.5.3">HTML 4.01 outlines 2 general types of elements</a> that may appear within the document body: the <i>block-level</i> elements, which usually begin on a new line and occupy one or more lines; and <i>inline</i> elements, which do not begin on or occupy an entire line(s) and may only contain text or other inline elements. Most block-level elements can contain any type of content, including other block-level elements.</p>
-			<p><tt>i</tt>, <tt>b</tt>, and <tt>s</tt> are inline elements. <tt>h1</tt> - <tt>h6</tt>, and <tt>p</tt> are block-level elements.
-			<h3>Quoting</h3>
-			<p>Two common elements are available for quoting: the <tt>q</tt> and <tt>blockquote</tt> elements. <tt>q</tt> represents a short, inline quotation; it surrounds it's content with left and right double quotations, it is a better than simply surrounding your text with non-directional double quotes. <tt>blockquote</tt> represents a block-level quotation, it is suitable for longer quotes that may span one or more paragraphs.</p>
-<pre>
-&lt;p&gt;&lt;q&gt;This is an inline quote&lt;/q&gt; within a paragraph.&lt;/p&gt;
-&lt;blockquote&gt;
-	&lt;p&gt;This is a block quote.&lt;/p&gt;
-	&lt;p&gt;This block quote contains 2 paragraphs.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
-			<div class="html-example">
-				<p><q>This is an inline quote</q> within a paragraph.</p>
-				<blockquote>
-					<p>This is a block quote.</p>
-					<p>This block quote contains 2 paragraphs.</p>
-				</blockquote>
-			</div>
-			<h3>Horizontal Rules and Line Breaks</h3>
-			<p>An HTML element that does not hold content is called an <i>empty element</i>. Elements of this type only have a start tag but no end tag.</p>
-			<p>The empty element <tt>hr</tt> represents a thematic break with a horizontal rule. The empty element <tt>br</tt> represents a line break.</p>
-<pre>
-&lt;p&gt;A horizontal rule follows:&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;A paragraph broken by &lt;br&gt; a line break.&lt;/p&gt;
-&lt;p&gt;The last paragraph.&lt;/p&gt;
-</pre>
-			<div class="html-example">
-				<p>A horizontal rule follows:</p>
-				<hr>
-				<p>A paragraph broken by <br> a line break.</p>
-				<p>The last paragraph.</p>
-			</div>
+			<article>
+				<header>
+					<h1>Basic Formatting</h1>
+				</header>
+				<p>Most HTML elements follow the form <code>&lt;TAG&gt;CONTENT&lt;/TAG&gt;</code>, thus creating an HTML-only web page is only a matter of remembering the names and meanings of common tags.</p>
+				<h3>Headings, paragraphs, and text emphasis</h3>
+				<p>You should already know that the <code>p</code> element displays it's content as a paragraph by placing it on a new line with a small amount of space inserted before and after it.</p>
+				<p>Another useful set of elements includes the heading elements: <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, and <code>h6</code>. They display their content as a heading, with large and bold font; heading elements should be used outside of paragraph elements.</p>
+				<p>Observe HTML code below and it's proceeding result:</p>
+				<figure>
+					<code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;A title&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;A heading&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;A paragraph.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;A subheading&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;A subsubheading&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Another paragraph.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Yet another paragraph.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;A paragraph with &lt;i&gt;italicized text&lt;/i&gt;, &lt;b&gt;bold text&lt;/b&gt;, and &lt;s&gt;strikethrough text&lt;/s&gt;.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+				</figure>
+				<figure>
+					<h1>A heading</h1>
+					<p>A paragraph.</p>
+					<h2>A subheading</h2>
+					<h3>A subsubheading</h3>
+					<p>Another paragraph.</p>
+					<p>Yet another paragraph.</p>
+					<p>A paragraph with <i>italicized text</i>, <b>bold text</b>, and <s>strikethrough text</s>.</p>
+				</figure>
+				<p>As one can induce, <code>h1</code> produces the largest heading and all subsequent heading elements produce smaller headings.</p>
+				<p>The last paragraph demonstrates the effect of <code>i</code>, <code>b</code>, and <code>s</code> elements. By default, these elements produce italicized, bold, and strikethrough text respectively. These three elements can be nested to apply mixed formatting to the same content; for example <code>&lt;i&gt;&lt;b&gt;&lt;s&gt;hello world&lt;/s&gt;&lt;/b&gt;&lt;/i&gt;</code> produces <i><b><s>hello world</s></b></i> on this web page.</p>
+				<h3>Block-level elements and inline elements</h3>
+				<p><a href="https://www.w3.org/TR/html401/struct/global.html#h-7.5.3">HTML 4.01 outlines 2 general types of elements</a> that may appear within the document body: the <i>block-level</i> elements, which usually begin on a new line and occupy one or more lines; and <i>inline</i> elements, which do not begin on or occupy an entire line(s) and may only contain text or other inline elements. Most block-level elements can contain any type of content, including other block-level elements.</p>
+				<p><code>i</code>, <code>b</code>, and <code>s</code> are inline elements. <code>h1</code> - <code>h6</code>, and <code>p</code> are block-level elements.
+				<h3>Quoting</h3>
+				<p>Two common elements are available for quoting: the <code>q</code> and <code>blockquote</code> elements. <code>q</code> represents a short, inline quotation; it surrounds it's content with left and right double quotations, it is a better than simply surrounding your text with non-directional double quotes. <code>blockquote</code> represents a block-level quotation, it is suitable for longer quotes that may span one or more paragraphs.</p>
+				<figure>
+					<code>&lt;p&gt;&lt;q&gt;This is an inline quote&lt;/q&gt; within a paragraph.&lt;/p&gt;<br>&lt;blockquote&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a block quote.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This block quote contains 2 paragraphs.&lt;/p&gt;<br>&lt;/blockquote&gt;<br></code>
+				</figure>
+				<figure>
+					<p><q>This is an inline quote</q> within a paragraph.</p>
+					<blockquote>
+						<p>This is a block quote.</p>
+						<p>This block quote contains 2 paragraphs.</p>
+					</blockquote>
+				</figure>
+				<h3>Horizontal Rules and Line Breaks</h3>
+				<p>An HTML element that does not hold content is called an <i>empty element</i>. Elements of this type only have a start tag but no end tag.</p>
+				<p>The empty element <code>hr</code> represents a thematic break with a horizontal rule. The empty element <code>br</code> represents a line break.</p>
+				<figure>
+					<code>&lt;p&gt;A horizontal rule follows:&lt;/p&gt;<br>&lt;hr&gt;<br>&lt;p&gt;A paragraph broken by &lt;br&gt; a line break.&lt;/p&gt;<br>&lt;p&gt;The last paragraph.&lt;/p&gt;<br></code>
+				</figure>
+				<figure>
+					<p>A horizontal rule follows:</p>
+					<hr>
+					<p>A paragraph broken by <br> a line break.</p>
+					<p>The last paragraph.</p>
+				</figure>
+			</article>
 		</main>
 	</body>
 </html>

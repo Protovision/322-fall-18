@@ -5,7 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Mark Swoope">
 		<title>CSE 322: HTML</title>
-		<link href="main.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header>
@@ -27,27 +29,21 @@
 			</nav>
 		</header>
 		<main>
-			<header>
-				<h1>The HyperText Markup Language</h1>
-			</header>
-			<p>If one wishes to learn how to make a website from scratch as fast as possible, HTML is the first and primary language to learn; all other web languages being of secondary importance.</p>
-			<p>As mentioned earlier, <dfn><abbr title="HyperText Markup Language">HTML<abbr></dfn> is used for describing the content and structure of a webpage (a <dfn>webpage</dfn> is a document that is meant to be displayed in a web browser). Since a <dfn>website</dfn> is a collection of web pages that are linked together, one can create an entire web site using HTML alone.</p>
-			<p>The alphabet of HTML syntax belongs to plain text, thus a user can produce HTML code by using a text editor and a web page can be produced by saving HTML code from that text editor to the file system. After which, that web page can be opened and displayed by a web browser. This process can repeat for every significant edit to a web page or web site as it undergoes development.</p>
-			<p>The following HTML code describes a web page titled "My webpage" and containing a single paragraph that says "Hello world!".</p>
-<pre>
-&lt;DOCTYPE! html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;My webpage&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;p&gt;Hello world!&lt;/p&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-			<p>An HTML document is represented by a hierarchy of elements, at the root of this hierarchy is the <tt>html</tt> element. Within the <tt>html</tt> element are exactly two elements: the <tt>head</tt> element and the <tt>body</tt> element, in that order. No other elements should be directly under the <tt>html</tt> element (an element that is directly enclosed by another element is known as a <i>nested element</i>). The <tt>head</tt> element contains metadata for the document, such as the document's title. The <tt>body</tt> element contains the content of the document.</p>
-			<p>Each element is syntactically represented by it's <i>start tag</i>, it's <i>content</i>, and it's <i>end tag</i>. For example, the element <tt>&lt;p&gt;Hello world!&lt;/p&gt;</tt> has <tt>&lt;p&gt;</tt> for it's start tag, <tt>Hello world!</tt> for it's content, and <tt>&lt;/p&gt;</tt> for it's end tag. The name used within an element's start tag and end tag must be the same, this name is simply known as the <i>tag</i> of that element. The start tag, content, and end tag are also sometimes referred to by others as the "opening tag", "text", and "closing tag" respectively.</p>
-			<p>All text that begins with <tt>&lt;html&gt;</tt> and ends with <tt>&lt;/html&gt;</tt> is the HTML document. The line <tt>&lt;!DOCTYPE html&gt;</tt> is not part of the document, it is only stored at the beginning of the same file that stores the document to indicate to web browsers that the file stores an HTML document. It is always required.</p>
+			<article>
+				<header>
+					<h1>The HyperText Markup Language</h1>
+				</header>
+				<p>If one wishes to learn how to make a website from scratch as fast as possible, HTML is the first and primary language to learn; all other web languages being of secondary importance.</p>
+				<p>As mentioned earlier, <dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is used for describing the content and structure of a webpage (a <dfn>webpage</dfn> is a document that is meant to be displayed in a web browser). Since a <dfn>website</dfn> is a collection of web pages that are linked together, one can create an entire web site using HTML alone.</p>
+				<p>The alphabet of HTML syntax belongs to plain text, thus a user can produce HTML code by using a text editor and a web page can be produced by saving HTML code from that text editor to the file system. After which, that web page can be opened and displayed by a web browser. This process can repeat for every significant edit to a web page or web site as it undergoes development.</p>
+				<p>The following HTML code describes a web page titled "My webpage" and containing a single paragraph that says "Hello world!".</p>
+				<figure>
+					<code>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My Webpage&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello world!&lt;/p&gt;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+				</figure>
+				<p>An HTML document is represented by a hierarchy of elements, at the root of this hierarchy is the <code>html</code> element. Within the <code>html</code> element are exactly two elements: the <code>head</code> element and the <code>body</code> element, in that order. No other elements should be directly under the <code>html</code> element (an element that is directly enclosed by another element is known as a <i>nested element</i>). The <code>head</code> element contains metadata for the document, such as the document's title. The <code>body</code> element contains the content of the document.</p>
+				<p>Each element is syntactically represented by it's <i>start tag</i>, it's <i>content</i>, and it's <i>end tag</i>. For example, the element <code>&lt;p&gt;Hello world!&lt;/p&gt;</code> has <code>&lt;p&gt;</code> for it's start tag, <code>Hello world!</code> for it's content, and <code>&lt;/p&gt;</code> for it's end tag. The name used within an element's start tag and end tag must be the same, this name is simply known as the <i>tag</i> of that element. The start tag, content, and end tag are also sometimes referred to by others as the "opening tag", "text", and "closing tag" respectively.</p>
+				<p>All text that begins with <code>&lt;html&gt;</code> and ends with <code>&lt;/html&gt;</code> is the HTML document. The line <code>&lt;!DOCTYPE html&gt;</code> is not part of the document, it is only stored at the beginning of the same file that stores the document to indicate to web browsers that the file stores an HTML document. It is always required.</p>
+			</article>
 		</main>
 	</body>
 </html>

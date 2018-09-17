@@ -5,7 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Mark Swoope">
 		<title>CSE 322: CSS</title>
-		<link href="main.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header>
@@ -27,39 +29,29 @@
 			</nav>
 		</header>
 		<main>
-			<header>
-				<h1>Cascading Style Sheets</h1>
-			</header>
-			<p>The "styling" or "rendering" of a web document is primarily described by CSS code, this includes but is not limited to: colors, fonts, margins, borders, padding, positioning, and alignment.</p>
-			<p>CSS code can be embedded directly within HTML code or referenced to from a separate file. It is good practice to keep CSS code and HTML code in separate files to prevent unnecessary repetition of CSS code on multiple webpages for a website that shares common element styling.</p>
-			<p>To demonstrate CSS, let's start with a file named "style.css" that contains the following:</p>
-<pre>
-body { font-family: sans-serif; background-color: PeachPuff; }
-h1 { color: Violet; }
-p { color: Purple; }
-</pre>
-			<p>Now another file, an HTML file, may contain the following:</p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;link rel="stylesheet" href="style.css"&gt;
-		&lt;title&gt;CSS example&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;Welcome!&lt;/h1&gt;
-		&lt;p&gt;This webpage is stylish!&lt;/p&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-			<p>The resulting webpage has the following appearance:</p>
-			<div class="html-example" style="font-family: sans-serif; background-color: PeachPuff;">
-				<h1 style="color: Violet">Welcome!</h1>
-				<p style="color: Purple">This webpage is stylish!</p>
-			</div>
-			<p>Code like <code>body { font: sans-serif; background-color: PeachPuff; }</code> is called a <i>rule</i> in CSS. A rule is composed of a selector and a sequence of declarations; in this case the selector is <code>body</code>, indicating that the rule applies to the body element (and consequently all nested elements), and the declarations for this rule are <code>font-family: sans-serif;</code> and <code>background-color: PeachPuff;</code>. These two declarations specify that the <code>font-family</code> <i>property</i> should have the <i>value</i> <code>sans-serif</code> and the <code>background-color</code> property should have the value <code>PeachPuff</code>.</p>
-			<p>The next 2 rules from style.css specifies the colors for all h1 and p elements respectively.</p>
-			<p>To apply the styling from an <i>external style sheet</i> file into an HTML file, use the <code>link</code> tag, inside the document <code>head</code>, with the <code>rel</code> attribute set to <code>stylesheet</code> and the <code>href</code> attribute set to the URI of your css file.</p>
+			<article>
+				<header>
+					<h1>Cascading Style Sheets</h1>
+				</header>
+				<p>The "styling" or "rendering" of a web document is primarily described by CSS code, this includes but is not limited to: colors, fonts, margins, borders, padding, positioning, and alignment.</p>
+				<p>CSS code can be embedded directly within HTML code or referenced to from a separate file. It is good practice to keep CSS code and HTML code in separate files to prevent unnecessary repetition of CSS code on multiple webpages for a website that shares common element styling.</p>
+				<p>To demonstrate CSS, let's start with a file named "style.css" that contains the following:</p>
+				<figure>
+					<code>body { font-family: sans-serif; background-color: PeachPuff; }<br>h1 { color: Violet; }<br>p { color: Purple; }<br></code>
+				</figure>
+				<p>Now another file, an HTML file, may contain the following:</p>
+				<figure>
+					<code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;CSS exmaple&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome!&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This webpage is stylish!&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+				</figure>
+				<p>The resulting webpage has the following appearance:</p>
+				<figure style="font-family: sans-serif; background-color: PeachPuff">
+					<h1 style="color: Violet">Welcome!</h1>
+					<p style="color: Purple">This webpage is stylish!</p>
+				</figure>
+				<p>Code like <code>body { font: sans-serif; background-color: PeachPuff; }</code> is called a <i>rule</i> in CSS. A rule is composed of a selector and a sequence of declarations; in this case the selector is <code>body</code>, indicating that the rule applies to the body element (and consequently all nested elements), and the declarations for this rule are <code>font-family: sans-serif;</code> and <code>background-color: PeachPuff;</code>. These two declarations specify that the <code>font-family</code> <i>property</i> should have the <i>value</i> <code>sans-serif</code> and the <code>background-color</code> property should have the value <code>PeachPuff</code>.</p>
+				<p>The next 2 rules from style.css specifies the colors for all h1 and p elements respectively.</p>
+				<p>To apply the styling from an <i>external style sheet</i> file into an HTML file, use the <code>link</code> tag, inside the document <code>head</code>, with the <code>rel</code> attribute set to <code>stylesheet</code> and the <code>href</code> attribute set to the URI of your css file.</p>
+			</article>
 		</main>
 	</body>
 </html>
