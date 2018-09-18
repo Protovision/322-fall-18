@@ -37,12 +37,14 @@
 				<p>The World Wide Web, or what is now known as simply: The Web, has a short but detailed history and a profound integration into our daily lives.  It's utility as a medium of communication and presentation seems limitless. Harnessing the power to create websites shall be the goal of this course.</p>
 				<h3>The significant entities that underlie a connection</h3>
 				<p>Among other concrete and conceptual entities that make the presentation and interactability of a website possible, the most fundamental ones you should know are: the <i>client</i> and the <i>server</i>.</p>
-				<p>In the World Wide Web, the client and server refer to computer programs that exist on the opposite ends of a connection.</p>
-				<p>The client first attempts to establish a connection with the server. If that server accepts the connection, then for the duration of that connection: the client and server exchange messages using the Hyper Text Transfer Protocol (HTTP).</p>
-				<p>The type of message that an HTTP client sends to an HTTP server is known as a <i>request</i> and the type of message that an HTTP server sends in response to a request is known as a <i>response</i>.</p>
-				<p>A request is usually a request for a resource that is identified by a <i>Uniform Resource Identifier</i> (URI), in which case the response will contain the contents of that resource if such a resource was found.</p>
+				<p>In the World Wide Web, the <dfn>client</dfn> and <dfn>server</dfn> refer to computer programs that exist on the opposite ends of a connection, where the client is the one that initiates a connection to a server for the request of a resource and a server accepts connections from multiple clients to share resources with them.</p>
+				<p>In the case of web clients and web servers, the client first attempts to establish a connection with the server. If that server accepts the connection, then for the duration of that connection: the client and server exchange messages using the <abbr title="HyperText Transfer Protocol">HTTP</abbr>.</p>
+				<p><dfn title="HyperText Transfer Protocol">HTTP</dfn> is set of rules and meanings for computer programs to facilitate the exchange of information on the world wide web.</p>
+				<p>The type of message that an HTTP client sends to an HTTP server is known as an <i>HTTP request</i> and the type of message that an HTTP server sends in response to a request is known as an <i>HTTP response</i>.</p>
+				<p>An <dfn>HTTP request</dfn> is an HTTP message sent from an HTTP client to an HTTP server for the request a resource that is identified by a <abbr title="Uniform Resource Identifier">URI</abbr>. An <dfn>HTTP response</dfn> is an HTTP message sent from an HTTP server to an HTTP client containing the status and/or contents of a resource that was requested by the HTTP client.</p>
 				<h3>The Uniform Resource Identifier</h3>
-				<p>A <i>web browser</i> is a type of web client that is user interactive, most of them display the URI of a web site or other resource in the address bar.</p>
+				<p>A <dfn>web browser</dfn> is a type of HTTP client that is user interactive and user friendly, most of them display the URI of a web site or other resource in the address bar.</p>
+				<p>A <dfn title="Uniform Resource Locator">URI</dfn> is an encoded sequence of characters that identifies some resource.</p>
 				<p>The components of a URI are: a <i>scheme</i>, an optional <i>authority</i>, a <i>path</i>, an optional <i>query</i>, and an optional <i>fragment</i>.</p>
 				<p>The URI <code>foo://example.com:8042/over/there?name=ferret#nose</code> is composed of:</p>
 				<ul>

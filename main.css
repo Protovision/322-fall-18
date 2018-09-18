@@ -2,17 +2,18 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'PT Sans', sans-serif;
-	font-size: normal;
-	font-style: normal;
 	color: Black;
 	background-color: WhiteSmoke;
 }
-h1,h2,h3,h4,h5,h6,th {
-	font-family: 'PT Sans Caption', sans-serif;
+h1,h2,h3,h4,h5,h6,th { font-family: 'PT Sans Caption', sans-serif; }
+code,kbd,samp,pre { font-family: 'PT Mono', monospace; }
+dfn {
+	font-style: normal;
+	font-weight: bold;
+	background-color: LightSteelBlue;
 }
 a { color: SteelBlue; text-decoration: none; }
 a:hover { text-decoration: underline; }
-code,kbd,samp,pre { font-family: 'PT Mono', monospace; }
 figure {
 	border: thin solid;
 	margin: 0;

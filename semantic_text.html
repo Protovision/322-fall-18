@@ -47,6 +47,8 @@
 						<li><a href="#strong">The <code>&lt;strong&gt;</code> element</a></li>
 						<li><a href="#mark">The <code>&lt;mark&gt;</code> element</a></li>
 						<li><a href="#s">The <code>&lt;s&gt;</code> element</a></li>
+						<li><a href="#del">The <code>&lt;del&gt;</code> element</a></li>
+						<li><a href="#ins">The <code>&lt;ins&gt;</code> element</a></li>
 					</ul>
 				</nav>
 				<section id="intro">
@@ -178,7 +180,7 @@
 					</figure>
 					<p>For importance apart from other details:</p>
 					<figure>
-						<code>Chapter 3: &lt;strong&gt;The Internet&lt;/strong&gt; and it's other early predecessors</code>
+						<code>&lt;h1&gt;Chapter 3: &lt;strong&gt;The Internet&lt;/strong&gt; and it's other early predecessors&lt;/h1&gt;</code>
 					</figure>
 					<p>For use as a warning label:</p>
 					<figure>
@@ -208,6 +210,49 @@
 						<figcaption><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-s-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.5</a></figcaption>
 						<blockquote>
 							<p>The <code>&lt;s&gt;</code> element represents contents that are no longer accurate or no longer relevant.</p>
+							<p>The <code>&lt;s&gt;</code> element is not appropriate when indicating document edits; to mark a span of text as having been removed from a document, use the <code>&lt;del&gt;</code> element.</p>
+						</blockquote>
+					</figure>
+				</section>
+				<p>Rather than removing content that is out of date, the <code>&lt;s&gt;</code> element allows one to keep it visible while contrasting it with it's updated replacement. This can be useful for pointing out an update in the price or inventory status of something.</p>
+				<p>Example 1: Show change in price.</p>
+				<figure>
+					<code>&lt;p&gt;&lt;b&gt;Tacos&lt;/b&gt;: &lt;s&gt;$1.50 each&lt;/s&gt; Now on sale for 99&amp;cent; each!&lt;/p&gt;</code>
+				</figure>
+				<p>Example 2: Show change in inventory status.</p>
+				<figure>
+					<code>&lt;h1&gt;&lt;s&gt;Get your tickets now!&lt;/s&gt; Tickets sold out!&lt;/h1&gt;</code>
+				</figure>
+				<p>Example 3: Show change in a policy or rule.</p>
+				<figure>
+					<code>&lt;strong&gt;&lt;s&gt;No refills&lt;/s&gt; 1 refill allowed.&lt;strong&gt;</code>
+				</figure>
+				<section id="del">
+					<h3>The <code>&lt;del&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/edits.html#elementdef-del"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.6.2</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;del&gt;</code> element represents a removal from the document.</p>
+							<p><code>&lt;del&gt;</code> elements should not cross implied paragraph boundaries.</p>
+						</blockquote>
+					</figure>
+					<p>W3C gives a clue to the difference between <code>&lt;s&gt;</code> and <code>&lt;del&gt;</code>, it appears that <code>&lt;s&gt;</code> is for removing content which is under the complete authority of the owner, not requiring either a citation or reason for the removal or update. Whereas <code>&lt;del&gt;</code> is to record the removal of content from an official or public document where multiple editors or peer are watching the document. <code>&lt;del&gt;</code> can also be used to cross off completed tasks or to indicate changes between different versions of a document. Basically, <code>&lt;s&gt;</code> indicates past information that is now outdated while <code>&lt;del&gt;</code> indicates a type of document edit where a previous version of this document used to include this portion of text but not anymore.</p>
+					<p>Example 1: Cross off completed tasks.</p>
+					<figure>
+						<code>&lt;h1&gt;To Do&lt;/h1&gt;<br>&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Feed chickens&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Return milk bottles&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Gather wood&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Heat water&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Skin potatoes&lt;/li&gt;<br>&lt;/ul&gt;<br></code>
+					</figure>
+					<p>Example 2: Show document edits</p>
+					<figure>
+						<code>&lt;h1&gt;Document Revision History&lt;/h1&gt;<br>&lt;table&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Date&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Editor&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Edit&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-08-22T12:30:43GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ralph Furley&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 12: &lt;del&gt;Add 2 cups of sugar&lt;/del&gt;&lt;ins&gt;Add 1 cup of brown sugar and 1 cup of white sugar&lt;/ins&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-07-14T01:44:03GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dave Krappenschitz&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 82: &lt;ins&gt;Wait 10 minutes before serving&lt;/ins&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-07-13T00:31:22GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Fidel Royolanda&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 3: &lt;del&gt;1 teaspoon Cumin&lt;/del&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&lt;/table&gt;<br></code>
+					</figure>
+				</section>
+				<section id="ins">
+					<h3>The <code>&lt;ins&gt;</code> element</h3>
+					<figure>
+						<figcaption><a href="https://www.w3.org/TR/html/edits.html#elementdef-ins"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.6.1</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;ins&gt;</code> element represents an addition to the document.</p>
+							<p>The <code>&lt;ins&gt;</code> element should not cross implied paragraph boundaries.</p>
 						</blockquote>
 					</figure>
 				</section>
