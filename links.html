@@ -6,7 +6,7 @@
 		<meta name="author" content="Mark Swoope">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="referrer" content="no-referrer">
-		<meta http-equiv="Content-Security-Policy" content="sandbox;">
+		<meta http-equiv="Content-Security-Policy" content="sandbox; upgrade-insecure-requests;">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
 		<link rel="stylesheet" href="normalize.css">
 		<link rel="stylesheet" href="main.css">	
@@ -26,7 +26,7 @@
 					<li><a href="media.html">Audio and Video</a></li>
 					<li><a href="semantic_text.html">Semantic Text</a></li>
 					<li><a href="css.html">CSS</a></li>
-					<li><a href="text_styling.html">Text Styling</a></li>
+					<li><a href="metadata.html">Metadata</a></li>
 					<li><a href="resources.html">Resources</a></li>
 				</ul>
 			</nav>
@@ -48,23 +48,6 @@
 					<a rel="external noopener noreferrer" href="https://www.csusb.edu/">CSUSB website</a>
 				</figure>
 				<p>One need not link to websites, the <code>a</code> element can also link directly to any kind of file such as a video or a PDF document. If capable, the contents of that file will be rendered within the web browser, otherwise the user has the option to download and possibly open that file with another application.</p>
-				<p>An optional <code>download</code> attribute may be specified, causing the resource to be downloaded (with the user's permission) rather than navigated to. No value is required for this attribute, except to override the name of the downloaded file.</p> 
-				<p>I made a simple C++ program to convert source code into HTML code for displaying that source code on a webpage while retaining whitespace and line breaks. With the following HTML code:</p>
-				<figure>
-					<code>&lt;a type="text/plain" href="code2html.cpp"&gt;View code2html.cpp&lt;/a&gt;</code>
-				</figure>
-				<p>It renders as a link to that C++ program:</p>
-				<figure>
-					<a type="text/plain" href="code2html.cpp">View code2html.cpp</a>
-				</figure>
-				<p>Clicking on the link will navigate to the file and display it within the web browser (unless the web browser is shoddy). The <code>type="text/plain"</code> attribute and value is a hint to the web browser that the link leads to a plain text file and not a web page. Now with the <code>download</code> attribute applied:</p>
-				<figure>
-					<code>&lt;a download href="code2html.cpp"&gt;Download code2html.cpp&lt;/a&gt;</code>
-				</figure>
-				<p>The same link will be downloaded instead:</p>
-				<figure>
-					<a download href="code2html.cpp">Download code2html.cpp</a>
-				</figure>
 				<p>When linking to an external website or resource, it is a good idea to prevent that website from tracking where the user is coming from out of respect for the user's privacy. For example:</p>
 				<figure>
 					<code>&lt;a rel="external noopener noreferrer" href="https://amazon.com/"&gt;amazon&lt;/a&gt;</code>

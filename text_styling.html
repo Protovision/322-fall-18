@@ -6,7 +6,7 @@
 		<meta name="author" content="Mark Swoope">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="referrer" content="no-referrer">
-		<meta http-equiv="Content-Security-Policy" content="sandbox;">
+		<meta http-equiv="Content-Security-Policy" content="sandbox; upgrade-insecure-requests;">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption|Dancing+Script">
 		<link rel="stylesheet" href="normalize.css">
 		<link rel="stylesheet" href="main.css">	
@@ -26,7 +26,7 @@
 					<li><a href="media.html">Audio and Video</a></li>
 					<li><a href="semantic_text.html">Semantic Text</a></li>
 					<li><a href="css.html">CSS</a></li>
-					<li><a class="current" href="#">Text Styling</a></li>
+					<li><a href="metadata.html">Metadata</a></li>
 					<li><a href="resources.html">Resources</a></li>
 				</ul>
 			</nav>
@@ -36,7 +36,24 @@
 				<header>
 					<h1>Text Styling</h1>
 				</header>
-				<!-- color, background-color, line-height, text-align, white-space, text-decoration, font-family, font-size, font-style, font-weight -->
+				<nav>
+					<b>Table of Contents</b>
+					<ul>
+						<li><a href="#colors">Colors</a></li>
+						<li><a href="#alignment-and-spacing">Alignment and Spacing</a></li>
+						<li><a href="#monospace-text">Monospace text</a></li>
+						<li><a href="#fonts">Fonts</a></li>
+					</ul>
+				</nav>
+				<figure>
+					<code></code>
+				</figure>
+				<section id="colors">
+					<h3>Colors</h3>
+					<p>The <code>color</code> and <code>background-color</code> CSS properties control the foreground color and background color of any element, respectively. The two main ways to express the value of these properties are to use a <a rel="external noopener noreferrer" href="https://www.w3schools.com/colors/colors_hex.asp">standard color name</a> or to use a hexadecimal color value.</p>
+				</section>
+<!--
+				 color, background-color, line-height, text-align, white-space, text-decoration, font-family, font-size, font-style, font-weight
 				<h3>Colors</h3>
 				<p><code>color</code> and <code>background-color</code> sets the foreground and background color of an element, respectively. Their values can be expressed in many formats, including: hexadecimal, RGBA, and HSLA format. In addition, there are several <a rel="external noopener noreferrer" href="https://www.w3schools.com/colors/colors_hex.asp">standard color names</a> which map to particular hexadecimal color values.</p>
 				<p>If I wanted all <code>&lt;strong&gt;</code> elements to have red text, my css file should contain the rule: <code>strong { color: Red; }</code>. Alternatively, the same rule can be expressed with a color value in hexadecimal color format: <code>strong { color: #FF0000; }</code>. The result is <strong style="color: Red">this strong text</strong>.</p>
@@ -99,6 +116,7 @@
 						</dl>
 					</dd>
 				</dl>
+				-->
 			</article>
 		</main>
 	</body>
