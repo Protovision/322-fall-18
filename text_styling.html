@@ -27,6 +27,7 @@
 					<li><a href="semantic_text.html">Semantic Text</a></li>
 					<li><a href="css.html">CSS</a></li>
 					<li><a href="metadata.html">Metadata</a></li>
+					<li><a class="current" href="#">Text Styling</a></li>
 					<li><a href="resources.html">Resources</a></li>
 				</ul>
 			</nav>
@@ -45,12 +46,206 @@
 						<li><a href="#fonts">Fonts</a></li>
 					</ul>
 				</nav>
-				<figure>
-					<code></code>
-				</figure>
 				<section id="colors">
 					<h3>Colors</h3>
 					<p>The <code>color</code> and <code>background-color</code> CSS properties control the foreground color and background color of any element, respectively. The two main ways to express the value of these properties are to use a <a rel="external noopener noreferrer" href="https://www.w3schools.com/colors/colors_hex.asp">standard color name</a> or to use a hexadecimal color value.</p>
+					<p>To make all <code>strong</code> elements contain red text, create the following CSS rule in your CSS file:</p>
+					<figure>
+						<code>strong { color: Red; }</code>
+					</figure>
+					<p>The effect of this rule on an HTML element such as:</p>
+					<figure>
+						<code>&lt;strong&gt;Urgent: Put on oxygen masks first!&lt;/strong&gt;</code>
+					</figure>
+					<p>Results in:</p>
+					<figure>
+						<strong style="color: Red">Urgent: Put on oxygen masks first!</strong>
+					</figure>
+					<p>Perhaps to make strong text more visible, the background color can be red and the foreground color can be white:</p>
+					<figure>
+						<code>strong { color: White; background-color: Red; }</code>
+					</figure>
+					<p>Now the result is:</p>
+					<figure>
+						<strong style="color: White; background-color: Red;">Urgent: Put on oxygen masks first!</strong>
+					</figure>
+					<p>It is important to note that certain CSS properties applied to an HTML element can be inherited from that HTML element's ancestor element. For example, if the <code>background-color</code> of the <code>&lt;body&gt;</code> element is <code>Beige</code>, then all elements anywhere inside <code>&lt;body&gt;</code> will also have their <code>background-color</code> property set to <code>Beige</code> unless overridden. Here's another example:</p>
+					<figure>
+						<figcaption><i>styles.css</i></code></figcaption>
+						<hr style="border: thin dashed;">
+						<code>body { color: SaddleBrown; background-color: Beige; }</code>
+					</figure>
+					<figure>
+						<figcaption><i>index.html</i></figcaption>
+						<hr style="border: thin dashed;">
+						<code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Hello world!&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to my website&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;More content will be ready soon!&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+					</figure>
+					<p>The resulting website looks somewhat like this:</p>
+					<div style="border: thin solid black; line-height: 1.0; color: SaddleBrown; background-color: Beige;">
+							<h1>Welcome to my website!</h1>
+							<p>More content will be ready soon!</p>
+					</div>
+					<p>These color names are very general and standard, but to use a very specific color with control over the amount of red, blue, and green mixed in the color's pixel display, the hexadecimal color value format should be used. Every standard color name has it's equivalent hexadecimal color value, but not vice versa. Here's a table of common color names and their CSS hexadecimal color equivalent:</p>
+					<table>
+						<tr>
+							<th>CSS color name</th>
+							<th>CSS Hexadecimal color value</th>
+						</tr>
+						<tr>
+							<td><code>Black</code></td>
+							<td><code>#000000</code></td>
+						</tr>
+						<tr>
+							<td><code>Blue</code></td>
+							<td><code>#0000FF</code></td>
+						</tr>
+						<tr>
+							<td><code>Cyan</code></td>
+							<td><code>#00FFFF</code></td>
+						</tr>
+						<tr>
+							<td><code>Gray</code></td>
+							<td><code>#808080</code></td>
+						</tr>
+						<tr>
+							<td><code>Green</code></td>
+							<td><code>#008000</code></td>
+						</tr>
+						<tr>
+							<td><code>Lime</code></td>
+							<td><code>#00FF00</code></td>
+						</tr>
+						<tr>
+							<td><code>Magenta</code></td>
+							<td><code>#FF00FF</code></td>
+						</tr>
+						<tr>
+							<td><code>Navy</code></td>
+							<td><code>#000080</code></td>
+						</tr>
+						<tr>
+							<td><code>Olive</code></td>
+							<td><code>#808000</code></td>
+						</tr>
+						<tr>
+							<td><code>Purple</code></td>
+							<td><code>#800080</code></td>
+						</tr>
+						<tr>
+							<td><code>Red</code></td>
+							<td><code>#FF0000</code></td>
+						</tr>
+						<tr>
+							<td><code>Teal</code></td>
+							<td><code>#008080</code></td>
+						</tr>
+						<tr>
+							<td><code>White</code></td>
+							<td><code>#FFFFFF</code></td>
+						</tr>
+						<tr>
+							<td><code>Yellow</code></td>
+							<td><code>#FFFF00</code></td>
+						</tr>
+					</table>
+					<p>Every 2 digits in a hexadecimal color value ranges from <code>00</code> to <code>FF</code> where <code>00</code> is the lowest intensity and <code>FF</code> is the highest intensity for one of the 3 components of the color. The first pair of digits (starting on the left) controls the intensity of the red component, the second pair of digits controls the intensity of the blue component, and the last pair of digits controls the intensity of the green component. These three components mix together to make up the final visual effect of the color. If all three components are set to their lowest intensity, <code>00</code>, then the color becomes black. If all three components are set to their highest intensity, <code>FF</code>, then the color becomes white. All other colors inbetween are a mixture of varying intensities of red, green, and blue.</p>
+				</section>
+				<section id="alignment-and-spacing">
+					<h3>Alignment and Spacing</h3>
+					<p>The <code>line-height</code> property controls the spacing between lines of text. It's value is a number like 1.0, 1.5, or 2.0. This property can be used on any element, but it is often used in a CSS rule that selects the <code>&lt;body&gt;</code> element or the <code>&lt;p&gt;</code> elements. Compare their effects:</p>
+					<figure style="line-height: 1.0">
+						<p>This is<br>single line spacing.<br>line-height is<br>set to 1.0.</p>
+					</figure>
+					<figure style="line-height: 1.5">
+						<p>This is<br>single-and-a-half line spacing.<br>line-height is<br>set to 1.5.</p>
+					</figure>
+					<figure style="line-height: 2.0">
+						<p>This is<br>double line spacing.<br>line-height is<br>set to 2.0.</p>
+					</figure>
+					<p>The <code>text-align</code> property controls the horizontal alignment of text. The default value of this property is <code>left</code> for left-alignment, but other possible values include <code>right</code>, <code>center</code>, and <code>justify</code>. Compare their effects:</p>
+					<figure style="text-align: left;">
+						<p><code>text-align: left</code> results in left-aligned text.</p>
+					</figure>
+					<figure style="text-align: right;">
+						<p><code>text-align: right</code> results in right-aligned text.</p>
+					</figure>
+					<figure style="text-align: center;">
+						<p><code>text-align: center</code> results in center-aligned text.</p>
+					</figure>
+					<figure style="text-align: justify; width: 20%;">
+						<p><code>text-align: justify</code> results in text occupying it's container evenly such that the text forms a near perfect rectangular block when displayed in small containers.</p>
+					</figure>
+				</section>
+				<section id="monospace-text">
+					<h3>Monospace Text</h3>
+					<p>The code examples you've seen on this website all use a monospace font which is the default font applied to the following elements:</p>
+					<figure>
+						<figcaption><a rel="external noopener noreferrer" href="https://www.w3.org/TR/html/textlevel-semantics.html#the-code-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.17</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;code&gt;</code> element represents a fragment of computer code. This could be an XML element name, a file name, a computer program, or any other string that a computer would recognize.</p>
+						</blockquote>
+					</figure>
+					<figure>
+						<figcaption><a rel="external noopener noreferrer" href="https://www.w3.org/TR/html/textlevel-semantics.html#the-samp-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.19</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;samp&gt;</code> element represents a sample or quoted output from another program or computing system.</p>
+						</blockquote>
+					</figure>
+					<figure>
+						<figcaption><a rel="external noopener noreferrer" href="https://www.w3.org/TR/html/textlevel-semantics.html#the-kbd-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.5.20</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;kbd&gt;</code> element represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).</p>
+						</blockquote>
+					</figure>
+					<figure>
+						<figcaption><a rel="external noopener noreferrer" href="https://www.w3.org/TR/html/grouping-content.html#the-pre-element"><cite>HTML 5.2, W3C Recommendation</cite>, &sect; 4.4.4</a></figcaption>
+						<blockquote>
+							<p>The <code>&lt;pre&gt;</code> element represents a block of preformatted text, in which structure is represented by typographic conventions rather than by elements.</p>
+						</blockquote>
+					</figure>
+					<p>A monospace font assigns the same width to every character used. It especially appropriate for showing code examples on a web page, but more needs to be done to ensure that computer code displays properly. The following characters need to be escaped in HTML to be displayed as is:</p>
+					<table>
+						<tr>
+							<th>Character</th>
+							<th>HTML Entity</th>
+						</tr>
+						<tr>
+							<td>"<kbd>&lt;</kbd>"</td>
+							<td><code>&amp;lt;</code></td>
+						</tr>
+						<tr>
+							<td>"<kbd>&gt;</kbd>"</td>
+							<td><code>&amp;gt;</code></td>
+						</tr>
+						<tr>
+							<td>"<kbd>&amp;</kbd>"</td>
+							<td><code>&amp;amp;</code></td>
+						</tr>
+						<tr>
+							<td>"<kbd> </kbd>"</td>
+							<td><code>&amp;nbsp;</code></td>
+						</tr>
+					</table>
+					<p>In addition, line breaks in your code example should be replaced with a <code>&lt;br&gt;</code> element and tabs can be replaced with a number of <code>&amp;nbsp;</code> entities.</p>
+					<p>A <i>hello world</i> C++ program:</p>
+					<figure>
+						<code>#include&nbsp;&lt;iostream&gt;<br>using&nbsp;namespace&nbsp;std;<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Hello&nbsp;world!\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>}</code>
+					</figure>
+					<p>Would safely be displayed on a web page with the following HTML code:</p>
+					<figure>
+						<code>&lt;code&gt;#include&amp;nbsp;&amp;lt;iostream&amp;gt;&lt;br&gt;using&amp;nbsp;namespace&amp;nbsp;std;&lt;br&gt;&lt;br&gt;int&amp;nbsp;main()&lt;br&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;cout&amp;nbsp;&amp;lt;&amp;lt;&amp;nbsp;"Hello&amp;nbsp;world!\n";&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;0;&lt;br&gt;}&lt;/code&gt;<br></code>
+					</figure>
+					<p>This method is a lot safer than using the <code>&lt;pre&gt;</code> element with unescaped whitespace.</p>
+					<p>It is very tedious to replace all special HTML characters with their respective HTML entity so the following simple C++ program can do it for you. Just paste the contents of your code into this program's input and the output is the HTML representation of that code:</p>
+					<figure>
+						<figcaption><i>code2html.cpp</i></figcaption>
+						<hr style="border: thin dashed">
+						<code>#include&nbsp;&lt;iostream&gt;<br>using&nbsp;namespace&nbsp;std;<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;c;<br>&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(cin.get(c))&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&lt;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;lt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&gt;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;gt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&amp;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;amp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&nbsp;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;nbsp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'\t')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'\n')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&lt;br&gt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;cout&nbsp;&lt;&lt;&nbsp;c;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>}<br></code>
+					</figure>
+				</section>
+				<section id="fonts">
+					<h3>Fonts</h3>
+					<p>Under construction.</p>
 				</section>
 <!--
 				 color, background-color, line-height, text-align, white-space, text-decoration, font-family, font-size, font-style, font-weight
