@@ -175,6 +175,49 @@
 					<figure style="text-align: justify; width: 20%;">
 						<p><code>text-align: justify</code> results in text occupying it's container evenly such that the text forms a near perfect rectangular block when displayed in small containers.</p>
 					</figure>
+					<p>The <code>white-space</code> property controls how whitespace (spaces, tabs, newlines, etc.) are handled.</p>
+					<table>
+						<tr>
+							<th><code>white-space</code> Value</th>
+							<th>Spaces</th>
+							<th>Line breaks</th>
+						</tr>
+						<tr>
+							<td><code>normal</code></td>
+							<td>Collapsed</td>
+							<td>Automatic only</td>
+						</tr>
+						<tr>
+							<td><code>nowrap</code></td>
+							<td>Collapsed</td>
+							<td>Manual only</td>
+						</tr>
+						<tr>
+							<td><code>pre</code></td>
+							<td>Preserved</td>
+							<td>Manual only</td>
+						</tr>
+						<tr>
+							<td><code>pre-line</code></td>
+							<td>Collapsed</td>
+							<td>Manual and Automatic</td>
+						</tr>
+						<tr>
+							<td><code>pre-wrap</code></td>
+							<td>Preserved</td>
+							<td>Manual and Automatic</td>
+						</tr>
+					</table>
+					<dl>
+						<dt>Spaces: Collapsed</dt>
+						<dd>Sequences of whitespace characters are collapsed to a single space character</dd>
+						<dt>Spaces: Preserved</dt>
+						<dd>Sequences of whitespace characters are preserved</dd>
+						<dt>Lines breaks: Automatic</dt>
+						<dd>A line break automatically triggers when the text reaches the edge of it's containing element</dd>
+						<dt>Lines breaks: Manual</dt>
+						<dd>A line break is manually triggered by the presence of a newline character</dd>
+					</dl>
 				</section>
 				<section id="monospace-text">
 					<h3>Monospace Text</h3>
@@ -245,73 +288,35 @@
 				</section>
 				<section id="fonts">
 					<h3>Fonts</h3>
-					<p>Under construction.</p>
+					<p><code>font-family</code> controls the font family of text. Three possible values which are always available are <code>serif</code>, <code>sans-serif</code>, and <code>monospace</code>. Let's compare these font families by using inline style sheets:</p>
+					<figure>
+						<code>&lt;p&nbsp;style="font-family:&nbsp;serif;"&gt;font-family&nbsp;is&nbsp;serif.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;sans-serif;"&gt;font-family&nbsp;is&nbsp;sans-serif.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;monospace;"&gt;font-family&nbsp;is&nbsp;monospace.&lt;/p&gt;<br></code>
+					</figure>
+					<p>The result is:</p>
+					<figure>
+						<p style="font-family: serif;">font-family is serif.</p>
+						<p style="font-family: sans-serif;">font-family is sans-serif.</p>
+						<p style="font-family: monospace;">font-family is monospace.</p>
+					</figure>
+					<p>These font families are generic; they represent whatever the default serif, sans serif, and monospace fonts that the user's web browser uses respectively. To use a specific font family, specify it's name enclosed in single or double quotes, example: <code>font-family: 'Times New Roman';</code>.
+					<p>The value of <code>font-family</code> can be specified as a comma-separated list, the first item in the list that the user's web browser supports will be selected. Compare the following code and it's output:</p>
+					<figure>
+						<code>&lt;p&nbsp;style="font-family:&nbsp;'Times&nbsp;New&nbsp;Roman',&nbsp;'Georgia',&nbsp;serif;"&gt;Text&nbsp;in&nbsp;a&nbsp;particular&nbsp;serif&nbsp;font.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;'Open&nbsp;Sans',&nbsp;'Lucida&nbsp;Sans',&nbsp;sans-serif;"&gt;Text&nbsp;in&nbsp;a&nbsp;particular&nbsp;sans&nbsp;serif&nbsp;font.&lt;/p&gt;<br></code>
+					</figure>
+					<figure>
+						<p style="font-family: 'Times New Roman', 'Georgia',  serif;">Text in a particular serif font.</p>
+						<p style="font-family: 'Open Sans', 'Lucida Sans', sans-serif;">Text in a particular sans serif font.</p>
+					</figure>
+					<p>Fonts from font files can be imported into CSS code and other CSS code can use those fonts. The Google corporation provides online external style sheets that one can import to use fonts that the user need not necessarily have installed.</p>
+					<figure>
+						<code>&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;href="https://fonts.googleapis.com/css?family=Dancing+Script"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&nbsp;style="font-family:&nbsp;'Dancing&nbsp;Script'"&gt;Text&nbsp;in&nbsp;'Dancing&nbsp;Script'&nbsp;font&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+					</figure>
+					<figure>
+						<h1 style="font-family: 'Dancing Script', sans-serif;">Text in 'Dancing Script' font</h1>
+					</figure>
+					<p>Multiple fonts can also be imported and used for free from Google, visit <a rel="external noopener noreferrer" href="https://fonts.google.com">https://fonts.google.com</a> for more information.</p>
+					<!-- font-size, font-style, font-weight -->	
 				</section>
-<!--
-				 color, background-color, line-height, text-align, white-space, text-decoration, font-family, font-size, font-style, font-weight
-				<h3>Colors</h3>
-				<p><code>color</code> and <code>background-color</code> sets the foreground and background color of an element, respectively. Their values can be expressed in many formats, including: hexadecimal, RGBA, and HSLA format. In addition, there are several <a rel="external noopener noreferrer" href="https://www.w3schools.com/colors/colors_hex.asp">standard color names</a> which map to particular hexadecimal color values.</p>
-				<p>If I wanted all <code>&lt;strong&gt;</code> elements to have red text, my css file should contain the rule: <code>strong { color: Red; }</code>. Alternatively, the same rule can be expressed with a color value in hexadecimal color format: <code>strong { color: #FF0000; }</code>. The result is <strong style="color: Red">this strong text</strong>.</p>
-				<p>For computer code, one could have the rule:</p>
-				<figure>
-					<code>code { color: LimeGreen; background-color: Black; }</code>
-				</figure>
-				<p>and applied on the following HTML code:</p>
-				<figure>
-					<code>&lt;code&gt;cout &amp;lt;&amp;lt; "Hello world!" &amp;lt;&amp;lt; endl;&lt;/code&gt;</code>
-				</figure>
-				<p>results in:</p>
-				<p><code style="color: LimeGreen; background-color: Black;">cout &lt;&lt; "Hello world!" &lt;&lt; endl;</code>.</p>
-				<p>Since the <i>&lt;</i>, <i>&gt;</i>, and <i>&amp;</i> signs are reserved characters in HTML, they must be escaped in order to be displayed. This can be done using <a rel="external noopener noreferrer" href="https://www.w3schools.com/html/html_entities.asp">HTML entities</a>.</p>
-				<p>In hexadecimal color format, the expression begins with the <code>#</code>, then the first pair of hex digits represents the amount of red in the final color, the second pair of hex digits represents the amount of green in the final color, and the third pair of hex digits represents the amount of blue in the final color. Every pair of hex digits ranges from 00 to FF (255 in decimal). A single hex digit can be: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, or F.</p>
-				<p>Using a color name or a hexadecimal color value are the most used ways of expressing a color value. If you have time, you should look up how to use the other css color formats.</p>
-				<h3>Fonts</h3>
-				<p>Several aspects related to the font of a text can be manipulated in CSS. Three simple ones are <code>font-style</code>, <code>font-weight</code>, and <code>font-size</code>. The values you should know for <code>font-style</code> are <code>normal</code> and <code>italic</code>. The values you should know for <code>font-weight</code> are <code>normal</code> and <code>bold</code>. <code>normal</code> is the default value for both of these properties. For <code>font-size</code>, <code>small</code>, <code>medium</code>, and <code>large</code> are a subset of it's possible values; visit <a rel="external noopener noreferrer" href="https://www.w3schools.com/cssref/pr_font_font-size.asp">the w3schools article on the CSS font-size Property</a> for more information.</p>
-				<p>Consider this style for <code>&lt;em&gt;</code> elements:</p>
-				<figure>
-					<code>em {<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: Yellow;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>}<br></code>
-				</figure>
-				<p>It results in emphasized text that <i style="background-color: Yellow; font-style: italic; font-weight: bold;">looks like this</i>.</p>
-				<p><code>font-family</code> sets the font for an element. It's value can be the specific name of a font family enclosed in double or single quotes, or an identifier for a generic family name. The generic family names are:</p>
-				<ul>
-					<li><code>serif</code>: <span style="font-family: serif;">For a font that is similar to "Times New Roman" or "Georgia" fonts.</span></li>
-					<li><code>sans-serif</code>: <span style="font-family: sans-serif;">For a font that is similar to the "Arial" or "Helvetica" fonts.</span></li>
-					<li><code>monospace</code>: <span style="font-family: monospace;">For a font that is similar to "Courier" or "Courier New" fonts.</span></li>
-				</ul>
-				<p>Multiple values can be specified for <code>font-family</code>, in which case the first supported font is used. For example:</p>
-				<figure>
-					<code>body { font-family: 'Georgie', 'Palatino', 'Times New Roman', serif; }</code>
-				</figure>
-				<p>Here 'Georgia' is the preferred font, if the web browser does not support that font then 'Palatino' is used, otherwise 'Times New Roman' is used, otherwise any generic serif font is selected for the entire document body.</p>
-				<p>It is possible to import a font from an online source such as <tt>fonts.googleapis.com</tt>. Observe the following code and it's output:</p>
-				<figure>
-					<code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;This document is using the 'Dancing Script' font.&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
-				</figure>
-				<figure>
-					<h1 style="font-family: 'Dancing Script', sans-serif;">This document is using the 'Dancing Script' font.</h1>
-				</figure>
-				<p>Fonts can actually be imported into a CSS file and CSS files can be imported into an HTML file. Importing the CSS file from the URI <tt>https://fonts.googleapis.com/css?family=Dancing+Script</tt> enables one to use the font 'Dancing Script'. The content of the <code>&lt;style&gt;</code> element is known as an <i>inline style sheet</i>, it is CSS code that applies to the same HTML document that it resides in.</p>
-				<p>To find more free fonts to use with this method, visit <a rel="external noopener noreferrer" href="https://fonts.google.com/">https://fonts.google.com/</a>.</p>
-				<h3>Alignment and Spacing</h3>
-				<p>Some useful CSS for manipulating the alignment and spacing of text are:</p>
-				<dl>
-					<dt><code>line-height</code></dt>
-					<dd>Sets the spacing of lines. The value can be a number that will be multiplied with the current font-size. For example, one can set this to 1 for "single-spacing", 1.5 for "single and a half spacing", and 2 for "double spacing".</dd>
-					<dt><code>text-align</code></dt>
-					<dd>Sets the text alignment. A few possible values include: <code>left</code>, <code>right</code>, and <code>center</code>.</dd>
-					<dt><code>white-space</code></dt>
-					<dd>Controls how white space is handled in the text. A few possible values include:
-						<dl>
-							<dt><code>normal</code></dt>
-							<dd>The default value: adjacent whitespace collapses into a single space and text wraps when necessary.</dd>
-							<dt><code>pre-line</code></dt>
-							<dd>Same as normal except text also wraps on a manual line break (useful for poems).</dd>
-							<dt><code>pre-wrap</code></dt>
-							<dd>Whitespace is preserved and text wraps when necessary or on manual line breaks (useful for computer code examples).</dd>
-						</dl>
-					</dd>
-				</dl>
-				-->
 			</article>
 		</main>
 	</body>
