@@ -69,23 +69,23 @@
 					<p><code>&lt;i&gt;</code> is a very general element that can be used for terms, names, titles of works, titles of nobility, foreign words, foreign phrases, thoughts, or emphasis. Here are some examples of it's use:</p>
 					<p>For use with the name of something:</p>
 					<figure>
-						<code>The name of the ship was &lt;i&gt;Destiny&lt;/i&gt;.</code>
+						<pre><code>The name of the ship was &lt;i&gt;Destiny&lt;/i&gt;.</code></pre>
 					</figure>
 					<p>For use with a term:</p>
 					<figure>
-						<code>&lt;i&gt;bandwidth&lt;/i&gt; refers to the maximum amount of data that can be transmitted on a given path per unit of time.</code>
+						<pre><code>&lt;i&gt;bandwidth&lt;/i&gt; refers to the maximum amount of data that can be transmitted on a given path per unit of time.</code></pre>
 					</figure>
 					<p>For use with a thought:</p>
 					<figure>
-						<code>She thought to herself &lt;i&gt;Where did the jar of cookies go?&lt;/i&gt;</code>
+						<pre><code>She thought to herself &lt;i&gt;Where did the jar of cookies go?&lt;/i&gt;</code></pre>
 					</figure>
 					<p>For use with a foreign word or phrase:</p>
 					<figure>
-						<code>The tempo of the raffle entries coming in was &lt;i&gt;prestissimo&lt;/i&gt;.</code>
+						<pre><code>The tempo of the raffle entries coming in was &lt;i&gt;prestissimo&lt;/i&gt;.</code></pre>
 					</figure>
 					<p>For use with the title of a book, song, or movie:</p>
 					<figure>
-						<code>I love &lt;i&gt;Men in Black&lt;/i&gt;!</code>
+						<pre><code>I love &lt;i&gt;Men in Black&lt;/i&gt;!</code></pre>
 					</figure>
 				</section>
 				<section id="em">
@@ -98,7 +98,7 @@
 					</figure>
 					<p><code>&lt;em&gt;</code> is more specific than it's more general <code>&lt;i&gt;</code> relative, it is strictly for stress emphasis of a word or phrase and nothing more, thus it is more preferred than <code>&lt;i&gt;</code> if stress emphasis is all you need. Example:</p>
 					<figure>
-						<code>Just &lt;em&gt;do&lt;/em&gt; it!</code>
+						<pre><code>Just &lt;em&gt;do&lt;/em&gt; it!</code></pre>
 					</figure>
 				</section>
 				<section id="cite">
@@ -112,7 +112,7 @@
 					<p><code>&lt;cite&gt;</code> is also preferred over <code>&lt;i&gt;</code> specifically for titles of creative works. Despite the quote above from W3C, using this tag for or with an author's name is disputed by the other HTML standard maintained by WHATWG.</p>
 					<p>Example use for a title of a creative work:</p>
 					<figure>
-						<code>Gerard Butler played the main character of &lt;cite&gt;Gladiator&lt;/cite&gt;.</code>
+						<pre><code>Gerard Butler played the main character of &lt;cite&gt;Gladiator&lt;/cite&gt;.</code></pre>
 					</figure>
 				</section>
 				<section id="dfn">
@@ -125,11 +125,11 @@
 					</figure>
 					<p>This element is preferred over <code>&lt;i&gt;</code> for use with a term that is being defined.</p>
 					<figure>
-						<code>&lt;dfn&gt;HyperText Markup Language&lt;/dfn&gt; is a computer language for describing the structure of web pages.</code>
+						<pre><code>&lt;dfn&gt;HyperText Markup Language&lt;/dfn&gt; is a computer language for describing the structure of web pages.</code></pre>
 					</figure>
 					<p>When used in the above way, the content of the element must contain the exact word or phase being defined and nothing else. Alternatively, an acronym can be used as the content, in which case the value of the element's <code>title</code> attribute must be the exact word or phrase that's being defined:</p>
 					<figure>
-						<code>&lt;dfn title="HyperText Markup Language"&gt;HTML&lt;/dfn&gt; is a computer language for describing the structure of web pages.</code>
+						<pre><code>&lt;dfn title="HyperText Markup Language"&gt;HTML&lt;/dfn&gt; is a computer language for describing the structure of web pages.</code></pre>
 					</figure>
 					<p>When used in this way, many web browsers will display the title of the definition's acronym in a tooltip when the element is hovered over. It is important that the definition of the term be found immediately outside the element, within the enclosing paragraph or list item.</p>
 				</section>
@@ -143,7 +143,7 @@
 					</figure>
 					<p>This element represents an abbreviation whose expansion is not necessarily being defined as one is doing while using the <code>&lt;dfn&gt;</code> element. Example:</p>
 					<figure>
-						<code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; was first introduced in 1996.</code>
+						<pre><code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; was first introduced in 1996.</code></pre>
 					</figure>
 				</section>
 				<section id="b">
@@ -157,15 +157,15 @@
 					<p>This element shouldn't be used for stress emphasis (use <code>&lt;em&gt;</code> for that), importance (use <code>&lt;strong&gt;</code> for that), heading text (use the <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> elements for that), or alternate voice/mood (use <code>&lt;i&gt;</code> for that). It should just be used to make text more visible, while not affecting the tone or tempo of the text when read out loud.</p>
 					<p>Example for use in an opening sentence of an article:</p>
 					<figure>
-						<code>&lt;b&gt;It was a quarter past midnight&lt;/b&gt; when a fiery object streaked across the sky.</code>
+						<pre><code>&lt;b&gt;It was a quarter past midnight&lt;/b&gt; when a fiery object streaked across the sky.</code></pre>
 					</figure>
 					<p>Example for bringing attention to offered products or services:</p>
 					<figure>
-						<code>Buy our new &lt;b&gt;Peppermint Latte&lt;/b&gt; and get a &lt;b&gt;Chocolate Chip Cookie&lt;/b&gt; free!</code>
+						<pre><code>Buy our new &lt;b&gt;Peppermint Latte&lt;/b&gt; and get a &lt;b&gt;Chocolate Chip Cookie&lt;/b&gt; free!</code></pre>
 					</figure>
 					<p>Example for bringing attention to an action in interactive software:</p>
 					<figure>
-						<code>Press &lt;b&gt;E&lt;/b&gt; to pick up.</code>
+						<pre><code>Press &lt;b&gt;E&lt;/b&gt; to pick up.</code></pre>
 					</figure>
 				</section>
 				<section id="strong">
@@ -179,15 +179,15 @@
 					<p>This element is recommended over <code>&lt;b&gt;</code> for scenarios illustrated by the following examples.</p>
 					<p>For seriousness:</p>
 					<figure>
-						<code>&lt;strong&gt;Lock the door&lt;/strong&gt; before leaving.</code>
+						<pre><code>&lt;strong&gt;Lock the door&lt;/strong&gt; before leaving.</code></pre>
 					</figure>
 					<p>For importance apart from other details:</p>
 					<figure>
-						<code>&lt;h1&gt;Chapter 3: &lt;strong&gt;The Internet&lt;/strong&gt; and it's other early predecessors&lt;/h1&gt;</code>
+						<pre><code>&lt;h1&gt;Chapter 3: &lt;strong&gt;The Internet&lt;/strong&gt; and it's other early predecessors&lt;/h1&gt;</code></pre>
 					</figure>
 					<p>For use as a warning label:</p>
 					<figure>
-						<code>&lt;strong&gt;Warning:&lt;/strong&gt; Don't try this at home.</code>
+						<pre><code>&lt;strong&gt;Warning:&lt;/strong&gt; Don't try this at home.</code></pre>
 					</figure>
 				</section>
 				<section id="mark">
@@ -200,11 +200,11 @@
 					</figure>
 					<p>Example when highlighting a part of a code fragment:</p>
 					<figure>
-						<code>The highlighted portion shows the mistake in the code: &lt;code&gt;if (n == 2)&lt;mark&gt;;&lt;/mark&gt; f(n);&lt;/code&gt;</code>
+						<pre><code>The highlighted portion shows the mistake in the code: &lt;code&gt;if (n == 2)&lt;mark&gt;;&lt;/mark&gt; f(n);&lt;/code&gt;</code></pre>
 					</figure>
 					<p>Example when highlighting something relevant from an originally unmarked text:</p>
 					<figure>
-						<code>&lt;p&gt;Madison briefly stated the two solutions in Federalist No. 10:&lt;/p&gt;<br>&lt;blockquote&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;There are two methods of curing the mischiefs of faction: the one, by &lt;mark&gt;removing its causes&lt;/mark&gt;; the other, by &lt;mark&gt;controlling its effects&lt;/mark&gt;.&lt;/p&gt;<br>&lt;/blockquote&gt;<br></code>
+						<pre><code>&lt;p&gt;Madison briefly stated the two solutions in Federalist No. 10:&lt;/p&gt;<br>&lt;blockquote&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;There are two methods of curing the mischiefs of faction: the one, by &lt;mark&gt;removing its causes&lt;/mark&gt;; the other, by &lt;mark&gt;controlling its effects&lt;/mark&gt;.&lt;/p&gt;<br>&lt;/blockquote&gt;<br></code></pre>
 					</figure>
 				</section>
 				<section id="s">
@@ -220,15 +220,15 @@
 				<p>Rather than removing content that is out of date, the <code>&lt;s&gt;</code> element allows one to keep it visible while contrasting it with it's updated replacement. This can be useful for pointing out an update in the price or inventory status of something.</p>
 				<p>Example 1: Show change in price.</p>
 				<figure>
-					<code>&lt;p&gt;&lt;b&gt;Tacos&lt;/b&gt;: &lt;s&gt;$1.50 each&lt;/s&gt; Now on sale for 99&amp;cent; each!&lt;/p&gt;</code>
+					<pre><code>&lt;p&gt;&lt;b&gt;Tacos&lt;/b&gt;: &lt;s&gt;$1.50 each&lt;/s&gt; Now on sale for 99&amp;cent; each!&lt;/p&gt;</code></pre>
 				</figure>
 				<p>Example 2: Show change in inventory status.</p>
 				<figure>
-					<code>&lt;h1&gt;&lt;s&gt;Get your tickets now!&lt;/s&gt; Tickets sold out!&lt;/h1&gt;</code>
+					<pre><code>&lt;h1&gt;&lt;s&gt;Get your tickets now!&lt;/s&gt; Tickets sold out!&lt;/h1&gt;</code></pre>
 				</figure>
 				<p>Example 3: Show change in a policy or rule.</p>
 				<figure>
-					<code>&lt;strong&gt;&lt;s&gt;No refills&lt;/s&gt; 1 refill allowed.&lt;strong&gt;</code>
+					<pre><code>&lt;strong&gt;&lt;s&gt;No refills&lt;/s&gt; 1 refill allowed.&lt;strong&gt;</code></pre>
 				</figure>
 				<section id="del">
 					<h3>The <code>&lt;del&gt;</code> element</h3>
@@ -242,11 +242,11 @@
 					<p>W3C gives a clue to the difference between <code>&lt;s&gt;</code> and <code>&lt;del&gt;</code>, it appears that <code>&lt;s&gt;</code> is for removing content which is under the complete authority of the owner, not requiring either a citation or reason for the removal or update. Whereas <code>&lt;del&gt;</code> is to record the removal of content from an official or public document where multiple editors or peer are watching the document. <code>&lt;del&gt;</code> can also be used to cross off completed tasks or to indicate changes between different versions of a document. Basically, <code>&lt;s&gt;</code> indicates past information that is now outdated while <code>&lt;del&gt;</code> indicates a type of document edit where a previous version of this document used to include this portion of text but not anymore.</p>
 					<p>Example 1: Cross off completed tasks.</p>
 					<figure>
-						<code>&lt;h1&gt;To Do&lt;/h1&gt;<br>&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Feed chickens&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Return milk bottles&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Gather wood&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Heat water&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Skin potatoes&lt;/li&gt;<br>&lt;/ul&gt;<br></code>
+						<pre><code>&lt;h1&gt;To Do&lt;/h1&gt;<br>&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Feed chickens&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Return milk bottles&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;del&gt;Gather wood&lt;/del&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Heat water&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Skin potatoes&lt;/li&gt;<br>&lt;/ul&gt;<br></code></pre>
 					</figure>
 					<p>Example 2: Show document edits</p>
 					<figure>
-						<code>&lt;h1&gt;Document Revision History&lt;/h1&gt;<br>&lt;table&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Date&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Editor&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Edit&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-08-22T12:30:43GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ralph Furley&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 12: &lt;del&gt;Add 2 cups of sugar&lt;/del&gt;&lt;ins&gt;Add 1 cup of brown sugar and 1 cup of white sugar&lt;/ins&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-07-14T01:44:03GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dave Krappenschitz&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 82: &lt;ins&gt;Wait 10 minutes before serving&lt;/ins&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-07-13T00:31:22GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Fidel Royolanda&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 3: &lt;del&gt;1 teaspoon Cumin&lt;/del&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&lt;/table&gt;<br></code>
+						<pre><code>&lt;h1&gt;Document Revision History&lt;/h1&gt;<br>&lt;table&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Date&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Editor&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Edit&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-08-22T12:30:43GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ralph Furley&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 12: &lt;del&gt;Add 2 cups of sugar&lt;/del&gt;&lt;ins&gt;Add 1 cup of brown sugar and 1 cup of white sugar&lt;/ins&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-07-14T01:44:03GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Dave Krappenschitz&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 82: &lt;ins&gt;Wait 10 minutes before serving&lt;/ins&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2014-07-13T00:31:22GMT&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Fidel Royolanda&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Line 3: &lt;del&gt;1 teaspoon Cumin&lt;/del&gt;&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>&lt;/table&gt;<br></code></pre>
 					</figure>
 				</section>
 				<section id="ins">

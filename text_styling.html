@@ -51,11 +51,11 @@
 					<p>The <code>color</code> and <code>background-color</code> CSS properties control the foreground color and background color of any element, respectively. The two main ways to express the value of these properties are to use a <a rel="external noopener noreferrer" href="https://www.w3schools.com/colors/colors_hex.asp">standard color name</a> or to use a hexadecimal color value.</p>
 					<p>To make all <code>strong</code> elements contain red text, create the following CSS rule in your CSS file:</p>
 					<figure>
-						<code>strong { color: Red; }</code>
+						<pre><code>strong { color: Red; }</code></pre>
 					</figure>
 					<p>The effect of this rule on an HTML element such as:</p>
 					<figure>
-						<code>&lt;strong&gt;Urgent: Put on oxygen masks first!&lt;/strong&gt;</code>
+						<pre><code>&lt;strong&gt;Urgent: Put on oxygen masks first!&lt;/strong&gt;</code></pre>
 					</figure>
 					<p>Results in:</p>
 					<figure>
@@ -63,7 +63,7 @@
 					</figure>
 					<p>Perhaps to make strong text more visible, the background color can be red and the foreground color can be white:</p>
 					<figure>
-						<code>strong { color: White; background-color: Red; }</code>
+						<pre><code>strong { color: White; background-color: Red; }</code></pre>
 					</figure>
 					<p>Now the result is:</p>
 					<figure>
@@ -73,12 +73,12 @@
 					<figure>
 						<figcaption><i>styles.css</i></code></figcaption>
 						<hr style="border: thin dashed;">
-						<code>body { color: SaddleBrown; background-color: Beige; }</code>
+						<pre><code>body { color: SaddleBrown; background-color: Beige; }</code></pre>
 					</figure>
 					<figure>
 						<figcaption><i>index.html</i></figcaption>
 						<hr style="border: thin dashed;">
-						<code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Hello world!&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to my website&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;More content will be ready soon!&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+						<pre><code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Hello world!&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to my website&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;More content will be ready soon!&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre>
 					</figure>
 					<p>The resulting website looks somewhat like this:</p>
 					<div style="border: thin solid black; line-height: 1.0; color: SaddleBrown; background-color: Beige;">
@@ -272,25 +272,32 @@
 					<p>In addition, line breaks in your code example should be replaced with a <code>&lt;br&gt;</code> element and tabs can be replaced with a number of <code>&amp;nbsp;</code> entities.</p>
 					<p>A <i>hello world</i> C++ program:</p>
 					<figure>
-						<code>#include&nbsp;&lt;iostream&gt;<br>using&nbsp;namespace&nbsp;std;<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Hello&nbsp;world!\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>}</code>
+						<pre><code>#include&nbsp;&lt;iostream&gt;<br>using&nbsp;namespace&nbsp;std;<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Hello&nbsp;world!\n";<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>}</code></pre>
 					</figure>
 					<p>Would safely be displayed on a web page with the following HTML code:</p>
 					<figure>
-						<code>&lt;code&gt;#include&amp;nbsp;&amp;lt;iostream&amp;gt;&lt;br&gt;using&amp;nbsp;namespace&amp;nbsp;std;&lt;br&gt;&lt;br&gt;int&amp;nbsp;main()&lt;br&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;cout&amp;nbsp;&amp;lt;&amp;lt;&amp;nbsp;"Hello&amp;nbsp;world!\n";&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;0;&lt;br&gt;}&lt;/code&gt;<br></code>
+						<pre><code>&lt;pre&gt;&lt;code&gt;#include&amp;nbsp;&amp;lt;iostream&amp;gt;&lt;br&gt;using&amp;nbsp;namespace&amp;nbsp;std;&lt;br&gt;&lt;br&gt;int&amp;nbsp;main()&lt;br&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;cout&amp;nbsp;&amp;lt;&amp;lt;&amp;nbsp;"Hello&amp;nbsp;world!\n";&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;0;&lt;br&gt;}&lt;/code&gt;&lt;/pre&gt;<br></code></pre>
 					</figure>
 					<p>This method is a lot safer than using the <code>&lt;pre&gt;</code> element with unescaped whitespace.</p>
 					<p>It is very tedious to replace all special HTML characters with their respective HTML entity so the following simple C++ program can do it for you. Just paste the contents of your code into this program's input and the output is the HTML representation of that code:</p>
 					<figure>
 						<figcaption><i>code2html.cpp</i></figcaption>
 						<hr style="border: thin dashed">
-						<code>#include&nbsp;&lt;iostream&gt;<br>using&nbsp;namespace&nbsp;std;<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;c;<br>&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(cin.get(c))&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&lt;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;lt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&gt;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;gt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&amp;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;amp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&nbsp;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;nbsp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'\t')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'\n')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&lt;br&gt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;cout&nbsp;&lt;&lt;&nbsp;c;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>}<br></code>
+						<pre><code>#include&nbsp;&lt;iostream&gt;<br>using&nbsp;namespace&nbsp;std;<br><br>int&nbsp;main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;c;<br>&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(cin.get(c))&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&lt;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;lt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&gt;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;gt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&amp;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;amp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'&nbsp;')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;nbsp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'\t')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(c&nbsp;==&nbsp;'\n')&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&lt;br&gt;";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;cout&nbsp;&lt;&lt;&nbsp;c;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>}<br></code></pre>
 					</figure>
+					<p>One other problem is what happens when the width of the window or containing element is smaller than the width of the text to be displayed in monospace; when this happens, then the content will extend outside the element, possibly out of the entire page, and the user will possibly be forced to horizontally scroll the entire page. The following style to <code>&lt;pre&gt;</code> should help:</p>
+					<figure>
+						<pre><code>pre { overflow: auto; white-space: nowrap; }</code></pre>
+					</figure>
+					<p><code>overflow: auto;</code> will automatically add a scrollbar that is local to the <code>pre</code> block-level element when it's text is longer or wider than the element itself. <code>white-space: nowrap;</code> overrides the default <code>white-space: pre;</code> property for this element, the new behavior will now require whitespace to be escaped with <code>&amp;nbsp;</code> and line breaks to be escaped with <code>&lt;br&gt;</code>.</p>
+					<p>When all of these suggestions are used together (the suggested style for the <code>&lt;pre&gt;</code> element, using the <code>&lt;code&gt;</code> element inside of the <code>&lt;pre&gt;</code> element, using HTML entities to format the text inside the <code>&lt;code&gt;</code> element), then computer code and other white-space significant text will be displayed in a neat and orderly manner on your website.</p>
+					<p>All the code example figures on this website use this method, feel free to study them by viewing the source of this website.</p>
 				</section>
 				<section id="fonts">
 					<h3>Fonts</h3>
 					<p><code>font-family</code> controls the font family of text. Three possible values which are always available are <code>serif</code>, <code>sans-serif</code>, and <code>monospace</code>. Let's compare these font families by using inline style sheets:</p>
 					<figure>
-						<code>&lt;p&nbsp;style="font-family:&nbsp;serif;"&gt;font-family&nbsp;is&nbsp;serif.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;sans-serif;"&gt;font-family&nbsp;is&nbsp;sans-serif.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;monospace;"&gt;font-family&nbsp;is&nbsp;monospace.&lt;/p&gt;<br></code>
+						<pre><code>&lt;p&nbsp;style="font-family:&nbsp;serif;"&gt;font-family&nbsp;is&nbsp;serif.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;sans-serif;"&gt;font-family&nbsp;is&nbsp;sans-serif.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;monospace;"&gt;font-family&nbsp;is&nbsp;monospace.&lt;/p&gt;<br></code></pre>
 					</figure>
 					<p>The result is:</p>
 					<figure>
@@ -301,7 +308,7 @@
 					<p>These font families are generic; they represent whatever the default serif, sans serif, and monospace fonts that the user's web browser uses respectively. To use a specific font family, specify it's name enclosed in single or double quotes, example: <code>font-family: 'Times New Roman';</code>.
 					<p>The value of <code>font-family</code> can be specified as a comma-separated list, the first item in the list that the user's web browser supports will be selected. Compare the following code and it's output:</p>
 					<figure>
-						<code>&lt;p&nbsp;style="font-family:&nbsp;'Times&nbsp;New&nbsp;Roman',&nbsp;'Georgia',&nbsp;serif;"&gt;Text&nbsp;in&nbsp;a&nbsp;particular&nbsp;serif&nbsp;font.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;'Open&nbsp;Sans',&nbsp;'Lucida&nbsp;Sans',&nbsp;sans-serif;"&gt;Text&nbsp;in&nbsp;a&nbsp;particular&nbsp;sans&nbsp;serif&nbsp;font.&lt;/p&gt;<br></code>
+						<pre><code>&lt;p&nbsp;style="font-family:&nbsp;'Times&nbsp;New&nbsp;Roman',&nbsp;'Georgia',&nbsp;serif;"&gt;Text&nbsp;in&nbsp;a&nbsp;particular&nbsp;serif&nbsp;font.&lt;/p&gt;<br>&lt;p&nbsp;style="font-family:&nbsp;'Open&nbsp;Sans',&nbsp;'Lucida&nbsp;Sans',&nbsp;sans-serif;"&gt;Text&nbsp;in&nbsp;a&nbsp;particular&nbsp;sans&nbsp;serif&nbsp;font.&lt;/p&gt;<br></code></pre>
 					</figure>
 					<figure>
 						<p style="font-family: 'Times New Roman', 'Georgia',  serif;">Text in a particular serif font.</p>
@@ -309,7 +316,7 @@
 					</figure>
 					<p>Fonts from font files can be imported into CSS code and other CSS code can use those fonts. The Google corporation provides online external style sheets that one can import to use fonts that the user need not necessarily have installed.</p>
 					<figure>
-						<code>&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;href="https://fonts.googleapis.com/css?family=Dancing+Script"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&nbsp;style="font-family:&nbsp;'Dancing&nbsp;Script'"&gt;Text&nbsp;in&nbsp;'Dancing&nbsp;Script'&nbsp;font&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+						<pre><code>&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;href="https://fonts.googleapis.com/css?family=Dancing+Script"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&nbsp;style="font-family:&nbsp;'Dancing&nbsp;Script'"&gt;Text&nbsp;in&nbsp;'Dancing&nbsp;Script'&nbsp;font&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre>
 					</figure>
 					<figure>
 						<h1 style="font-family: 'Dancing Script', sans-serif;">Text in 'Dancing Script' font</h1>
@@ -318,7 +325,7 @@
 					<p>The <code>font-size</code> property is one of the many CSS properties whose value is a length. Length values in CSS can be expressed in many units, the most popular length units in CSS are <code>px</code> and <code>em</code>. The length value <dfn title="px"><code>1px</code></dfn> is equal the length of a pixel on the user's device display which is the length of the smallest dot that can be displayed on the user's device. The length value <dfn title="em"><code>1em</code></dfn> is equal to the height of the letter 'M' using the font size of the nearest ancestor of the element which this value is being used to set a property value to.</p>
 					<p>Particular to the <code>font-size</code> property are values that name a identify a generic size such as <code>small</code>, <code>medium</code>, and <code>large</code>. Observe the following <code>font-size</code> examples:</p>
 					<figure>
-						<code>&lt;p&nbsp;style="font-size:&nbsp;0.5em;"&gt;0.5em&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;1em;"&gt;1em&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;2em;"&gt;2em&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;br&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;x-small;"&gt;x-small&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;small;"&gt;small&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;normal;"&gt;normal&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;large;"&gt;large&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;x-large;"&gt;x-large&nbsp;size&nbsp;text.&lt;/p&gt;<br></code>
+						<pre><code>&lt;p&nbsp;style="font-size:&nbsp;0.5em;"&gt;0.5em&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;1em;"&gt;1em&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;2em;"&gt;2em&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;br&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;x-small;"&gt;x-small&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;small;"&gt;small&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;normal;"&gt;normal&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;large;"&gt;large&nbsp;size&nbsp;text.&lt;/p&gt;<br>&lt;p&nbsp;style="font-size:&nbsp;x-large;"&gt;x-large&nbsp;size&nbsp;text.&lt;/p&gt;<br></code></pre>
 					</figure>
 					<figure>
 						<p style="font-size: 0.5em;">0.5em size text.</p>

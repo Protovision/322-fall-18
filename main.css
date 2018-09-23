@@ -3,10 +3,16 @@ body {
 	padding: 0;
 	font-family: 'PT Sans', sans-serif;
 	color: Black;
-	background-color: WhiteSmoke;
+	background-color: White;
 }
 h1,h2,h3,h4,h5,h6,th { font-family: 'PT Sans Caption', sans-serif; }
 code,kbd,samp,pre { font-family: 'PT Mono', monospace; }
+pre { 
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	white-space: nowrap;
+}
 dfn {
 	font-style: normal;
 	font-weight: bold;

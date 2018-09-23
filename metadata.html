@@ -38,35 +38,35 @@
 					<h1>Metadata</h1>
 				</header>
 				<figure>
-					<code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;YOUR TITLE HERE&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="author" content="YOUR NAME HERE"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="description" content="YOUR DESCRIPTION HERE"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="keywords" content="YOUR COMMA-SEPARATED KEYWORDS HERE"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR CONTENT HERE<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code>
+					<pre><code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;YOUR TITLE HERE&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="author" content="YOUR NAME HERE"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="description" content="YOUR DESCRIPTION HERE"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="keywords" content="YOUR COMMA-SEPARATED KEYWORDS HERE"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR CONTENT HERE<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre>
 				</figure>
 				<p>The above code should be your new template when creating a web page. Let's break down what each part of this template means.</p>
 				<figure>
-					<code>&lt;!DOCTYPE html&gt;</code>
+					<pre><code>&lt;!DOCTYPE html&gt;</code></pre>
 				</figure>
 				<p>This is a web browser directive that indicates the version of HTML that the current document is using. As of the present time of this writing, the most up-to-date major version of HTML is HTML5 and it's DOCTYPE declaration appears as shown above. Older HTML versions have different DOCTYPE declaration signatures. <code>&lt;!DOCTYPE html&gt;</code> should always be the first line of every HTML file that you make.</p>
 				<figure>
-					<code>&lt;html lang="en"&gt;</code>
+					<pre><code>&lt;html lang="en"&gt;</code></pre>
 				</figure>
 				<p>Recall that the entire document lies within the <code>html</code> element. It is recommended that the <code>lang</code> attribute, which specifies the language of the HTML document's content, be explicitly set. For example: use <code>en</code> for English, <code>es</code> for espa&ntilde;ol, and <code>fr</code> for <code>fran&ccedil;ais</code>. Visit the <a rel="external noopener noreferrer" href="https://www.w3schools.com/Tags/ref_language_codes.asp">HTML Language Code Reference at w3schools</a> for more language codes.</p>
 				<figure>
-					<code>&lt;meta charset="UTF-8"&gt;</code>
+					<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
 				</figure>
 				<p>The character encoding of the HTML document is set by specifying the value of the <code>charset</code> attribute within a <code>meta</code> element in the document head. For humans, this value should always be <code>UTF-8</code>. It is perhaps unnecessary to include this line since web browsers are required to use <code>UTF-8</code> by default, but not all web browsers follow the standard conventions.</p>
 				<figure>
-					<code>&lt;title&gt;YOUR TITLE HERE&lt;/title&gt;</code>
+					<pre><code>&lt;title&gt;YOUR TITLE HERE&lt;/title&gt;</code></pre>
 				</figure>
 				<p>In the document head, the content of the <code>title</code> element specifies the title of the document as it would appear in a web browser tab, bookmark, or history entry.</p>
 				<figure>
-					<code>&lt;meta name="author" content="YOUR NAME HERE"&gt;<br>&lt;meta name="description" content="YOUR DESCRIPTION HERE"&gt;<br>&lt;meta name="keywords" content="YOUR COMMA-SEPARATED KEYWORDS HERE"&gt;</code>
+					<pre><code>&lt;meta name="author" content="YOUR NAME HERE"&gt;<br>&lt;meta name="description" content="YOUR DESCRIPTION HERE"&gt;<br>&lt;meta name="keywords" content="YOUR COMMA-SEPARATED KEYWORDS HERE"&gt;</code></pre>
 				</figure>
 				<p>These elements specify the author, description, and keywords of the document respectively. The description of the document would most likely show up in a web browser bookmark or history entry. The keywords are specified using a comma-separated list of keywords that relate to the document's content; this can help search engines catalog your web page if they so choose not to ignore this historically abused element.</p>
 				<figure>
-					<code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+					<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
 				</figure>
 				<p>This line should always be present. These are instructions for controlling the <dfn>viewport</dfn>: the currently visible area of the web page. <code>width=device-width</code> ensures that CSS code that queries the width of the page will get the width of the device or window. Without this functionality CSS code will be unable to tailor the layout of the web page to different screen or window sizes. <code>initial-scale=1.0</code> will set the initial zoom level of the page to 1.0, meaning that the page is initially neither zoomed in nor zoomed out.</p>
 				<figure>
-					<code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+					<pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
 				</figure>
 				<p>Links your CSS code contained in the file <code>styles.css</code> to the HTML document. Styling rules in that CSS file will be applied to customize the appearance of your web page. You may add more lines like this to import the effects of multiple CSS files.</p>
 			</article>

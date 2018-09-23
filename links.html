@@ -42,7 +42,7 @@
 				<p>An <code>a</code> element allows it's content to be clicked, resulting in the web browser visiting the URI specified by the element's <code>href</code> attribute, resulting in the resource identified by that URI being navigated to within the web browser or downloaded; in other words, an <code>a</code> element represents a link (the general term used for referring to a <i>hyperlink</i>).</p>
 				<p>The HTML code:</p>
 				<figure>
-					<code>&lt;a href="https://www.csusb.edu/"&gt;CSUSB website&lt;/a&gt;</code>
+					<pre><code>&lt;a href="https://www.csusb.edu/"&gt;CSUSB website&lt;/a&gt;</code></pre>
 				</figure>
 				<p>Displays as:</p>
 				<figure>
@@ -51,13 +51,13 @@
 				<p>One need not link to websites, the <code>a</code> element can also link directly to any kind of file such as a video or a PDF document. If capable, the contents of that file will be rendered within the web browser, otherwise the user has the option to download and possibly open that file with another application.</p>
 				<p>When linking to an external website or resource, it is a good idea to prevent that website from tracking where the user is coming from out of respect for the user's privacy. For example:</p>
 				<figure>
-					<code>&lt;a rel="external noopener noreferrer" href="https://amazon.com/"&gt;amazon&lt;/a&gt;</code>
+					<pre><code>&lt;a rel="external noopener noreferrer" href="https://amazon.com/"&gt;amazon&lt;/a&gt;</code></pre>
 				</figure>
 				<p>This link has a <code>rel</code> attribute which specifies the relationship between this document and the link destination. The value of the <code>rel</code> attribute can be a combination of space-separated sub-values. In this case: <code>external</code> indicates that this link leads to a different website, <code>noopener</code> prevents the destination website from accessing code related to the current website, and <code>noreferrer</code> prevents the destination website from knowing the URI of this website. See <a rel="external noopener noreferrer" href="https://www.w3.org/TR/html/links.html#sec-link-types">HTML 5.2, W3C Recommendation, &sect; 4.8.6</a> for more detailed information on the <code>rel</code> attribute.</p>
 				<h3>Images</h3>
 				<p>There is an image file named "duck.jpg" on this website, here is example HTML code to embed that image on this page:</p>
 				<figure>
-					<code>&lt;img src="duck.jpg" alt="A yellow duckling" width="300" height="180"&gt;</code>
+					<pre><code>&lt;img src="duck.jpg" alt="A yellow duckling" width="300" height="180"&gt;</code></pre>
 				</figure>
 				<p>and here is the result:</p>
 				<img src="duck.jpg" alt="A yellow duckling" width="300" height="180">
