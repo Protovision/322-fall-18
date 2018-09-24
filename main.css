@@ -21,7 +21,7 @@ dfn {
 a { color: SteelBlue; text-decoration: none; }
 a:hover { text-decoration: underline; }
 figure {
-	border: thin solid;
+	border: thin solid Black;
 	margin: 0;
 	padding: 0.5em;
 	line-height: 1;
@@ -30,17 +30,17 @@ ul { list-style-type: circle; }
 table { 
 	margin: 0;
 	padding: 0;
-	border: thin solid; 
+	border: thin solid Black; 
 	border-collapse: collapse;
 }
 table th,td {
 	margin: 0;
 	padding: 0.25em 0.5em 0.25em 0.5em;
-	border: thin solid; 
+	border: thin solid Black; 
 }
 body>main>article nav {
 	display: inline-block;
-	border: thin solid;
+	border: thin solid Black;
 	padding: 1em;
 }
 body>main>article nav ul {
@@ -64,7 +64,7 @@ body>header>h1 {
 }
 body>header>hr {
 	color: White;
-	border: thin solid;
+	border: thin solid White;
 }
 body>header>nav>ul {
 	margin: 0;
@@ -103,5 +103,17 @@ body>main {
 	body>header {
 		display: none;
 	}
+	body>main {
+		margin: 0;
+		padding: 0;
+		width: auto;
+	}
+	figure { border: medium solid Gray; page-break-inside: avoid; }
+	table { border: medium solid Gray; page-break-inside: avoid; }
+	table th,td { border: medium solid Gray; }
+	pre { white-space: normal; }
+}
+@page {
+	margin: 1in;
 }
 
