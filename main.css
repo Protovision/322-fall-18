@@ -62,7 +62,7 @@ body>header>h1 {
 	margin: 0;
 	padding: 0.5em 0 0.5em 0;
 }
-body>header>hr {
+body>header hr {
 	color: White;
 	border: thin solid White;
 }
