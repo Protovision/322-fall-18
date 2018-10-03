@@ -1,0 +1,95 @@
+:root {
+	--quiz-main-font-family: 'PT Serif', 'Garamond', 'Times New Roman', 'Times', serif;
+	--quiz-heading-font-family: 'PT Serif Caption', 'Garamond', 'Times New Roman', 'Times', serif;
+	--quiz-code-font-family: 'PT Mono', 'Courier New', 'Courier', monospace;
+}
+main {
+	font-family: var(--quiz-main-font-family);
+	font-size: 12pt;
+	line-height: 1.5;
+	text-shadow: none;
+}
+main h1,h2,h3,h4,h5,h6 {
+	margin: 6pt 0 6pt 0;
+	padding: 0;
+	font-family: var(--quiz-heading-font-family);
+	font-weight: normal;
+}
+main h1 { font-size: 36pt; }
+main h2 { font-size: 24pt; }
+main h3 { font-size: 20pt; }
+main h4 { font-size: 16pt; }
+main h5 { font-size: 10pt; }
+main h6 { font-size: 8pt; }
+main code { font-family: var(--quiz-code-font-family); }
+b { font-weight: bold; }
+a { text-decoration: none; }
+a:hover,a:active { text-decoration: underline; }
+main figure {
+	margin: 6pt;
+	padding: 6pt;
+}
+main p { margin: 6pt 0 6pt 0; padding: 0; }
+#name {
+	box-sizing: border-box;
+	margin: 0 0 6pt auto;
+	width: 40%;
+	border-bottom: thin solid Black;
+}
+#title {
+	margin: 6pt 0 6pt 0;
+	padding: 0;
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+}
+.short-answer-question {
+	margin: 0 0 4em 0;
+}
+.multiple-choice-question ul {
+	margin: 6pt 0 6pt 0;
+	list-style-type: none;
+}
+.multiple-choice-question ul li {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 3.5in;
+}
+@media screen {
+	body {
+		color: Black;
+		background-color: Gray;
+	}
+	main>article,main>section {
+		box-sizing: border-box;
+		margin: 1em auto 1em auto;
+		padding: 0.5in;
+		width: 8.5in;
+		height: 11in;
+		color: Black;
+		background-color: White;
+		box-shadow: 5px 5px 20px Black;
+	}
+	main a { color: Black; background-color: White; }
+}
+@media print {
+	body {
+		color: Black;
+		background-color: transparent;
+	}
+	main>article,main>section {
+		margin: 0;
+		padding: 0.5in;			
+		width: auto;
+		height: auto;
+		color: Black;
+		background-color: transparent;
+		box-shadow: none;
+		text-shadow: none;
+	}
+	main a { color: Black; background-color: transparent; }
+	main>article+main>article { page-break-before: always; }
+	main>section+main>section { page-break-before: always; }
+	@page { margin: 0; }
+}
+
