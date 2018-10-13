@@ -10,6 +10,20 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
 		<link rel="stylesheet" href="normalize.css">
 		<link rel="stylesheet" href="main.css">
+		<style>
+			main>article>dl>dt {
+				display: inline-block;
+				border: thin solid;
+				border-bottom: none;
+				padding: 0 0.5em 0 0.5em;
+			}
+			main>article>dl>dd {
+				display: block;
+				margin: 0 0 1em 0;
+				padding: 1em;
+				border: thin solid;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -41,10 +55,13 @@
 				<header>
 					<h1>CSE 322: Announcements</h1>
 				</header>
-				<table>
-					<tr><th>Date Posted</th><th>Announcement</th></tr>
-					<tr><td>October 1, 2018</td><td><p>There will be a 10 question quiz on Monday, October 8. It will cover material from the first week.</p><p>On <a rel="external noopener noreferrer" href="https://github.com/csusbdt/322-2018">Dr. Turner's Github site for this course</a>, there is a link to a grade sheet for so that you may track which assignments you have gotten credit for. Email Dr. Turner a <a href="mailto:csusbdt@csusb.edu">csusbdt@csusb.edu</a> to request your grade sheet ID, include "CSE 322" in the subject.</p></tr>
-				</table>
+				
+				<dl>
+					<dt>October 13, 2018</dt>
+					<dd><p>The <a href="quizzes.html">Quizzes</a> page has been added to this website. Blank copies and solutions to past quizzes can be found there.</p></dd>
+					<dt>October 1, 2018</dt>
+					<dd><p>There will be a 10 question quiz on Monday, October 8. It will cover material from the first week.</p><p>On <a rel="external noopener noreferrer" href="https://github.com/csusbdt/322-2018">Dr. Turner's Github site for this course</a>, there is a link to a grade sheet for so that you may track which assignments you have gotten credit for. Email Dr. Turner a <a href="mailto:csusbdt@csusb.edu">csusbdt@csusb.edu</a> to request your grade sheet ID, include "CSE 322" in the subject.</p></dd>
+				</dl>
 			</article>
 		</main>
 	</body>
