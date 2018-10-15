@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSE 322: Box Model</title>
+		<meta name="author" content="Mark Swoope">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="referrer" content="no-referrer">
+		<meta http-equiv="Content-Security-Policy" content="sandbox; upgrade-insecure-requests;">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header>
+			<h1>CSE 322: Fall 2018<br>CSUSB</h1>
+			<nav>
+				<ul>
+					<hr>
+					<li><a href="index.html">Announcements</a></li>
+					<li><a href="syllabus.html">Syllabus</a></li>
+					<li><a href="exercises.html">Exercises</a></li>
+					<li><a href="quizzes.html">Quizzes</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<hr>
+					<li><a href="introduction.html">Introduction</a></li>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="formatting.html">Basic Formatting</a></li>
+					<li><a href="tables.html">Lists and Tables</a></li>
+					<li><a href="links.html">Links and Images</a></li>
+					<li><a href="media.html">Audio and Video</a></li>
+					<li><a href="semantic_text.html">Semantic Text</a></li>
+					<li><a href="css.html">CSS</a></li>
+					<li><a href="metadata.html">Metadata</a></li>
+					<li><a href="text_styling.html">Text Styling</a></li>
+					<li><a class="current" href="#">Box Model</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<article>
+				<header>
+					<h1>Box Model</h1>
+					<nav>
+						<b>Table of Contents</b>
+						<ul>
+							<li><a href="#introduction">Introduction</a></li>
+							<li><a href="#box">The CSS Box Model</a></li>
+							<li><a href="#spacing">Margins and Padding</a></li>
+							<li><a href="#display">Display types</a></li>
+							<li><a href="#sizing">Box sizing</a></li>
+						</ul>
+					</nav>
+				</header>
+				<section id="introduction">
+					<h3>Introduction</h3>
+					<p>Every element that can be styled with CSS occupies a rectangular area of the webpage, this can be shown by setting the <code>border</code> property of an element.</p>
+					<p>Here a thin, solid border is applied to an <code>&lt;i&gt;</code> element:</p>
+					<figure>
+						<pre><code>&lt;i&nbsp;style="border:&nbsp;thin&nbsp;solid;"&gt;Hello&nbsp;world!&lt;/i&gt;</code></pre>
+					</figure>
+					<p>The result within a web browser window would like this:</p>
+					<figure>
+						<i style="border: thin solid;">Hello world!</i>
+					</figure>
+					<p>If we change the inline element <code>&lt;i&gt;</code> to a block-level element <code>&lt;p&gt;</code>:</p>
+					<figure>
+						<pre><code>&lt;p&nbsp;style="border:&nbsp;thin&nbsp;solid;"&gt;Hello&nbsp;world!&lt;/p&gt;</code></pre>
+					</figure>
+					<p>The result would look like this:</p>
+					<figure>
+						<p style="border: thin solid;">Hello world!</p>
+					</figure>
+					<p>The following code and it's result shows how the "boxes" of these 2 types of elements get rendered in succession.</p>
+					<figure>
+						<pre><code>&lt;style&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;{&nbsp;border:&nbsp;thin&nbsp;solid;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;p&nbsp;{&nbsp;border:&nbsp;thin&nbsp;solid;&nbsp;}<br>&lt;/style&gt;<br>&lt;i&gt;Hello&nbsp;world!&lt;/i&gt;<br>&lt;i&gt;Hello&nbsp;world!&lt;/i&gt;<br>&lt;i&gt;Hello&nbsp;world!&lt;/i&gt;<br>&lt;p&gt;Hello&nbsp;world!&lt;/p&gt;<br>&lt;p&gt;Hello&nbsp;world!&lt;/p&gt;<br>&lt;p&gt;Hello&nbsp;world!&lt;/p&gt;</code></pre>
+					</figure>
+					<figure>
+						<style>
+        						i.box { border: thin solid; }
+        						p.box { border: thin solid; }
+						</style>
+						<i class="box">Hello world!</i>
+						<i class="box">Hello world!</i>
+						<i class="box">Hello world!</i>
+						<p class="box">Hello world!</p>
+						<p class="box">Hello world!</p>
+						<p class="box">Hello world!</p>
+					</figure>
+					<p>Inline elements flow horizontally and block-level elements flow vertically.</p>
+					<p>Recall that elements can be nested. Here, an inline element is exclusively nested inside a block-level element with the borders of both elements made visible:</p>
+					<figure>
+						<pre><code>&lt;p&nbsp;style="border:&nbsp;thin&nbsp;solid;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;style="border:&nbsp;thin&nbsp;solid;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello&nbsp;world!<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/i&gt;<br>&lt;/p&gt;</code></pre>
+					</figure>
+					<p>The result:</p>
+					<figure>
+						<p style="border: thin solid;">
+							<i style="border: thin solid;">
+								Hello world!
+							</i>
+						</p>
+					</figure>
+				</section>
+				<section id="box">
+					<h3>The CSS Box Model</h3>
+					<p>There are 3 CSS properties that contribute to the box shaped area that an HTML element occupies: <code>margin</code>, <code>border</code>, and <code>padding</code>. The following code sets the width of each of these components to <code>1em</code> for all <code>figure</code> elements.</p>
+					<figure>
+						<pre><code>&lt;style&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;figure&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;1em;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;1em;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1em&nbsp;solid;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&lt;/style&gt;<br>&lt;figure&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Content<br>&lt;/figure&gt;</code></pre>
+					</figure>
+					<p>In the result, the outer space is the margin, the black rectangle is the border, and the inner space between the content and the border is the padding:</p>
+					<style>
+						#box-model-example-2 {
+							padding: 0;
+							color: Black;
+							background-color: White;
+							max-width: 720px;
+						}
+						#box-model-example-2>.box-element {
+							margin: 1em;
+							padding: 1em;
+							border: 1em solid;
+						}
+					</style>
+					<figure id="box-model-example-2">
+						<div class="box-element">
+							Content
+						</div>
+					</figure>
+					<p>For the sake of illustration, compare this colorized version of the above element:</p>
+					<style>
+						#box-model-example {
+							background-color: Yellow;
+							padding: 0;
+							max-width: 720px;
+						}
+						#box-model-example>.border-box {
+							margin: 1em;
+							padding: 1em;
+							border: 1em solid Blue;
+							color: Black;
+							background-color: Magenta;
+						}
+						#box-model-example>.border-box>.content-box {
+							background-color: LimeGreen;
+						}
+					</style>
+					<figure id="box-model-example">
+						<div class="border-box">
+							<div class="content-box">Content</div>
+						</div>
+					</figure>
+					<br>
+					<dl>
+						<dt><span style="color: Black; background-color: Yellow;">The yellow space</span></dt>
+						<dd>is the element's <dfn>margin</dfn>. It is the space that separates the element from other elements.</dd>
+						<dt><span style="color: White; background-color: Blue;">The blue area</span></dt>
+						<dd>is the element's <dfn>border</dfn>. It is a visible box that can  be rendered inside the element's margin.</dd>
+						<dt><span style="color: Black; background-color: Magenta;">The pink space</span></dt>
+						<dd>is the element's <dfn>padding</dfn>. It is the space that lies between the element's border (or margin if the border has not been set) and it's content.</dd>
+						<dt><span style="color: Black; background-color: LimeGreen;">The green area</span></dt>
+						<dd>is the element's <i>content</i></dd>
+					</dl>
+				</section>
+				<section id="spacing">
+					<h3>Margins and Padding</h3>
+					<p>Many block-level HTML elements have default margin values. The <code>&lt;p&gt;</code> element has the following default style:</p>
+					<figure>
+						<pre><code>p&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br>&nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;1em;<br>&nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;1em;<br>&nbsp;&nbsp;&nbsp;&nbsp;margin-left:&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;margin-right:&nbsp;0;<br>}</code></pre>
+					</figure>
+					<p>This code shows that it's possible to set different widths for each side of an element's margin, those being: the top, right, bottom, and left margins. The above code is equivalent to the following code:</p>
+					<figure>
+						<pre><code>p&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br>&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;1em&nbsp;0&nbsp;1em&nbsp;0;<br>}</code></pre>
+					</figure>
+					<p>And the following code is also equivalent:</p>
+					<figure>
+						<pre><code>p&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br>&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;1em&nbsp;0;<br>}</code></pre>
+					</figure>
+					<p>Setting the <code>margin</code> property also sets the <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code> properties, in that order if 4 values are specified. If 2 values are specified, the top and bottom margins are equal to the first value and the left and right margins are equal to the second value.</p>
+					<p>The properties for padding are controlled the same way, one can set the value of <code>padding</code> to set the width of all 4 sides of an element's padding or <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and <code>padding-left</code> can be set manually.</p>
+				</section>
+				<section id="display">
+					<h3>Display types</h3>
+					<p>In CSS, there are 3 common display types that can be set to the <code>display</code> property of an element:</p>
+					<dl>
+						<dt><code>display: inline;</code></dt>
+						<dd>Inline display elements flow horizontally, from left to right, not generating a line break unless the edge of the containing element is reached and wrapping is enabled. The total width of an inline display element is equal to the width of it's content plus the width of any margins or padding it may have on the left or right sides. The height of an inline display element is always defined by the line height of it's container; attempting to apply margins or padding to the top or bottom of an inline display element has no effect. Attempting to set the <code>height</code> and <code>width</code> properties on an inline display element also has no effect. The default display property of elements such as <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code>, and <code>&lt;strong&gt;</code> are <code>inline</code>.</dd>
+						<dt><code>display: block;</code></dt>
+						<dd>Block display elements flow vertically, from top to bottom, always beginning on a new line and ending on a new line. Block display elements may have margins or padding on any or all sides. The width of a block display element is equal to the width of an entire line by default, but this may be changed by setting the <code>width</code> property; regardless, the element still ends on a new line. The height of a block display element may be greater than the height of a single line if it's content wraps or if it's <code>height</code> property is set to a large enough value. The default display property of elements such as <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;blockquote&gt;</code>, and <code>&lt;ul&gt;</code> are <code>block</code>.</dd>
+						<dt><code>display: inline-block;</code></dt>
+						<dd>Inline-block display elements flow like inline display elements, but they may also have a width and height like block display elements.</dd>
+					</dl>
+					<p>There are 2 generic HTML elements that do not apply any formatting and have no default CSS styling except for their <code>display</code> property:</p>
+					<dl>
+						<dt>The <code>&lt;span&gt;</code> element</dt>
+						<dd>It's default style is: <code>span { display: inline; }</code>.</dd>
+						<dt>The <code>&lt;div&gt;</code> element</dt>
+						<dd>It's default style is: <code>div { display: block; }</code></dd>
+					</dl>
+				</section>
+				<section id="sizing">
+					<h3>Boz sizing</h3>
+					<p>The <code>box-sizing</code> property controls how the width and height of an element is calculated:</p>
+					<dl>
+						<dt><code>box-sizing: content-box;</code></dt>
+						<dd>This is the default. The value of an element's <code>width</code> or <code>height</code> property applies to the length of it's content only; the length of it's padding, border, and margins are added afterwards.</dd>
+						<dt><code>box-sizing: border-box;</code></dt>
+						<dd>The value of an element's <code>width</code> or <code>height</code> property applies to the length of it's content, padding, and border; the length of it's margins are added afterwards.</dd>
+					</dl>
+					<p>This example displays two bordered elements that have the same value set to their margins, border, padding, width, and height properties; the only difference being that one has a content-box box-sizing and the other has a border-box box-sizing:</p>
+					<figure>
+						<pre><code>&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Box&nbsp;sizing&nbsp;example&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.box-sizing-example&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;5px&nbsp;solid;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;5px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;150px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="box-sizing-example"&nbsp;style="box-sizing:&nbsp;content-box;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;width&nbsp;=&nbsp;170px&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;height&nbsp;=&nbsp;120px<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="box-sizing-example"&nbsp;style="box-sizing:&nbsp;border-box;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;width&nbsp;=&nbsp;150px;&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;height&nbsp;=&nbsp;100px;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+					</figure>
+					<figure>
+						<style>
+                        				.box-sizing-example {
+                                				margin: 0;
+                                				border: 5px solid;
+                                				padding: 5px;
+                                				width: 150px;
+                                				height: 100px;
+                        				}
+                				</style>
+                				<div class="box-sizing-example" style="box-sizing: content-box;">
+                        				Total width = 170px<br>
+                        				Total height = 120px
+                				</div>
+                				<br>
+                				<div class="box-sizing-example" style="box-sizing: border-box;">
+                        				Total width = 150px;<br>
+                        				Total height = 100px;
+                				</div>
+                			</figure>
+                			<p>The following formulas show how width and height (not including margins) are calculated depending on the <code>box-sizing</code> property:</p>
+                			<dl>
+                				<dt><code>box-sizing: content-box;</code></dt>
+                				<dd>
+                					<code>width</code> = content-width.<br>
+                					<code>height</code> = content-height.<br>
+                				</dd>
+                				<dt><code>box-sizing: border-box;</code></dt>
+                				<dd>
+                					<code>width</code> = <code>border-left</code> + <code>padding-left</code> + content-width + <code>padding-right</code> + <code>border-right</code>.<br>
+                					<code>height</code>= <code>border-top</code> + <code>padding-top</code> + content-height + <code>padding-bottom</code> + <code>border-bottom</code>.<br>
+                				</dd>
+                			</dl>
+				</section>
+			</article>
+		</main>
+	</body>
+</html>
+				

@@ -46,6 +46,12 @@ main p { margin: 6pt 0 6pt 0; padding: 0; }
 .short-answer-question {
 	margin: 0 0 0.5in 0;
 }
+.medium-answer-question {
+	margin: 0 0 1in 0;
+}
+.long-answer-question {
+	margin: 0 0 2in 0;
+}
 .solution {
 	display: inline-block;
 	padding: 0 1em 0 1em;
