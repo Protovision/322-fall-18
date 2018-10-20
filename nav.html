@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSE 322: Box Model</title>
+		<meta name="author" content="Mark Swoope">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="referrer" content="no-referrer">
+		<meta http-equiv="Content-Security-Policy" content="sandbox; upgrade-insecure-requests;">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header>
+			<h1>CSE 322<br>Fall 2018<br>CSUSB</h1>
+			<nav>
+				<ul>
+					<hr>
+					<li><a href="index.html">Announcements</a></li>
+					<li><a href="syllabus.html">Syllabus</a></li>
+					<li><a href="exercises.html">Exercises</a></li>
+					<li><a href="quizzes.html">Quizzes</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<hr>
+					<li><a href="introduction.html">Introduction</a></li>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="formatting.html">Basic Formatting</a></li>
+					<li><a href="tables.html">Lists and Tables</a></li>
+					<li><a href="links.html">Links and Images</a></li>
+					<li><a href="media.html">Audio and Video</a></li>
+					<li><a href="semantic_text.html">Semantic Text</a></li>
+					<li><a href="css.html">CSS</a></li>
+					<li><a href="metadata.html">Metadata</a></li>
+					<li><a href="text_styling.html">Text Styling</a></li>
+					<li><a href="box.html">Box Model</a></li>
+					<li><a class="current" href="nav.html">Navigation Links</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<article>
+				<header>
+					<h1>Navigation Links</h1>
+				</header>
+				<p>Here is some HTML code for a webpage that contains navigation links:</p>
+				<figure>
+					<pre><code>&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&nbsp;lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Navigation&nbsp;Links&nbsp;Example&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;href="main.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Website&nbsp;title&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#"&gt;Link&nbsp;A&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#"&gt;Link&nbsp;B&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#"&gt;Link&nbsp;C&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#"&gt;Link&nbsp;D&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nav&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Main&nbsp;content&nbsp;title&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Main&nbsp;content&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre>
+				</figure>
+				<p>Some elements you may not have seen yet are <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;main&gt;</code>. These elements have no default styles other than <code>display: block;</code>. Their significance is purely semantic and for organizational purposes but they may be later on selected by CSS for styling.</p>
+				<p>The <code>&lt;header&gt;</code> element represents introductory content for any of the following elements: <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;details&gt;</code>, <code>&lt;dialog&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;td&gt;</code>.</p>
+				<p>When used as the descendant of <code>&lt;body&gt;</code>, the <code>&lt;header&gt;</code> element represents introductory content for the whole webpage and this may typically include: the website title, the website banner, and a set of navigation links.</p>
+				<p>The navigation links are represented by the <code>&lt;nav&gt;</code> element. In this example, the <code>&lt;nav&gt;</code> element is used in the header of the whole webpage, representing links to other webpages in the website. Another <code>&lt;nav&gt;</code> element could have been placed near the top of the <code>&lt;main&gt;</code> element to represent links to sections within the main content of the webpage.</p>
+				<p>The main content of the webpage is represented by the <code>&lt;main&gt;</code> element, it's content is what is peculiar to this webpage and does not get repeated across the other webpages.</p>
+				<p>Without any CSS code, the HTML code produces a webpage that looks like this:</p>
+				<figure>
+					<div class="header1">
+						<h1>Website title</h1>
+						<div class="nav1">
+							<ul>
+								<li><a href="#">Link A</a></li>
+								<li><a href="#">Link B</a></li>
+								<li><a href="#">Link C</a></li>
+								<li><a href="#">Link D</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="main1">
+						<h1>Main content title</h1>
+						<p>Main content</p>
+					</div>
+				</figure>
+				<p>The following style makes the list into a mobile-friendly vertical navigation menu with hover effects.</p>
+				<figure>
+					<pre><code>body&nbsp;{&nbsp;margin:&nbsp;0;&nbsp;}<br>body&gt;header&nbsp;{&nbsp;text-align:&nbsp;center;&nbsp;}<br>body&gt;header&gt;nav&gt;ul&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;DimGray;<br>&nbsp;&nbsp;&nbsp;&nbsp;list-style-type:&nbsp;none;<br>}<br>body&gt;header&gt;nav&gt;ul&gt;li:hover&nbsp;{&nbsp;background-color:&nbsp;MidnightBlue;&nbsp;}<br>body&gt;header&gt;nav&gt;ul&gt;li:active&nbsp;{&nbsp;background-color:&nbsp;Blue;&nbsp;}<br>body&gt;header&gt;nav&gt;ul&gt;li&gt;a&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br>&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;1em;<br>&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;White;<br>&nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br>}<br>body&gt;main&nbsp;{&nbsp;padding:&nbsp;1em;&nbsp;}<br></code></prE>
+				</figure>
+				<figure style="margin: 0; padding: 0;">
+					<style>
+						.header2 { text-align: center; }
+						.header2>.nav2>ul {
+							margin: 0;
+							padding: 0;
+							background-color: DimGray;
+							list-style-type: none;
+						}
+						.header2>.nav2>ul>li:hover { background-color: MidnightBlue; }
+						.header2>.nav2>ul>li:active { background-color: Blue; }
+						.header2>.nav2>ul>li>a {
+							display: block;
+							padding: 1em;
+							color: White;
+							text-decoration: none;
+						}
+						.main2 { padding: 1em; }
+					</style>
+					<div class="header2">
+						<h1>Website title</h1>
+						<div class="nav2">
+							<ul>
+								<li><a href="#">Link A</a></li>
+								<li><a href="#">Link B</a></li>
+								<li><a href="#">Link C</a></li>
+								<li><a href="#">Link D</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="main2">
+						<h1>Main content title</h1>
+						<p>Main content</p>
+					</div>
+				</figure>
+				<p>By adding the line:</p>
+				<figure>
+					<pre><code>body&gt;header&gt;nav&gt;ul&gt;li&nbsp;{&nbsp;display:&nbsp;inline-block;&nbsp;}</code></prE>
+				</figure>
+				<figure style="margin: 0; padding: 0;">
+					<style>
+						.header3 { text-align: center; }
+						.header3>.nav3>ul {
+							margin: 0;
+							padding: 0;
+							background-color: DimGray;
+							list-style-type: none;
+						}
+						.header3>.nav3>ul>li { display: inline-block; }
+						.header3>.nav3>ul>li:hover { background-color: MidnightBlue; }
+						.header3>.nav3>ul>li:active { background-color: Blue; }
+						.header3>.nav3>ul>li>a {
+							display: block;
+							padding: 1em;
+							color: White;
+							text-decoration: none;
+						}
+						.main3 { padding: 1em; }
+					</style>
+					<div class="header3">
+						<h1>Website title</h1>
+						<div class="nav3">
+							<ul>
+								<li><a href="#">Link A</a></li>
+								<li><a href="#">Link B</a></li>
+								<li><a href="#">Link C</a></li>
+								<li><a href="#">Link D</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="main3">
+						<h1>Main content title</h1>
+						<p>Main content</p>
+					</div>
+				</figure>
+				<p>The list items will no longer stack line-by-line and instead will flow horizontally, creating a horizontal navigation menu. Both types of menus will automatically increase in height as more links are added.</p>
+				<p>Some new syntax you should be aware of here is the <code>&gt;</code> combinator used within the selector of a CSS rule. The selector <code>body&gt;header</code> points to the <code>&lt;header&gt;</code> element that is a child of the <code>&lt;body&gt;</code> element, meaning that the <code>&lt;header&gt;</code> element's nearest ancestor is the <code>&lt;body&gt;</code> element. This is different from <code>body header</code> which selects any <code>&lt;header&gt;</code> element that is a descendant of the <code>&lt;body&gt;</code> element but not necessarily a child of it.</p>
+				<p>A selector like <code>body&gt;header&gt;nav&gt;ul</code> selects any <code>&lt;ul&gt;</code> element whose parent is a <code>&lt;nav&gt;</code> element whose parent is a <code>&lt;header&gt;</code> element whose parent is the <code>&lt;body&gt;</code> element.</p>
+				<p>To achieve the hover effects, the <code>:hover</code> and <code>:active</code> <i>pseudo-classes</i> are specified in the CSS selector. Their styles only apply when the selected element is in a certain state. The style for the <code>:hover</code> pseudo-class will apply when the user hovers over the element with a cursor. The style for the <code>:active</code> pseudo-class will apply when the user clicks on the element.</p>
+				<p>Notice how the <code>&lt;a&gt;</code> elements have their <code>display</code> changed to <code>block</code> so that they occupy the entire list item width; this relieves the user from having to click directly on the text of the link to activate it. Padding is used to give space between each navigation link, but padding is given to the links instead of to the list items that contain the links, otherwise the small space that would account for list item padding would not be clickable to activate a link.</p>
+			</article>
+		</main>
+	</body>
+</html>
