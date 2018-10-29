@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSE 322: Layouts</title>
+		<meta name="author" content="Mark Swoope">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="referrer" content="no-referrer">
+		<meta http-equiv="Content-Security-Policy" content="sandbox; upgrade-insecure-requests;">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Sans+Caption">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header>
+			<h1>CSE 322<br>Fall 2018<br>CSUSB</h1>
+			<nav>
+				<ul>
+					<hr>
+					<li><a href="index.html">Announcements</a></li>
+					<li><a href="syllabus.html">Syllabus</a></li>
+					<li><a href="exercises.html">Exercises</a></li>
+					<li><a href="quizzes.html">Quizzes</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<hr>
+					<li><a href="introduction.html">Introduction</a></li>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="formatting.html">Basic Formatting</a></li>
+					<li><a href="tables.html">Lists and Tables</a></li>
+					<li><a href="links.html">Links and Images</a></li>
+					<li><a href="media.html">Audio and Video</a></li>
+					<li><a href="semantic_text.html">Semantic Text</a></li>
+					<li><a href="css.html">CSS</a></li>
+					<li><a href="metadata.html">Metadata</a></li>
+					<li><a href="text_styling.html">Text Styling</a></li>
+					<li><a href="box.html">Box Model</a></li>
+					<li><a href="nav.html">Navigation Links</a></li>
+					<li><a class="current" href="#">Layouts</a></li>
+					<li><a href="menu.html">Navigation Menus</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<article>
+				<header>
+					<h1>Layouts</h1>
+				</header>
+				<p>Here is an HTML document that will be styled to have a 2-column layout:</p>
+				<figure>
+					<pre><code>&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&nbsp;lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;href="main.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;First&nbsp;column&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;mi&nbsp;in&nbsp;nulla&nbsp;posuere&nbsp;sollicitudin&nbsp;aliquam&nbsp;ultrices&nbsp;sagittis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orci&nbsp;a&nbsp;scelerisque&nbsp;purus&nbsp;semper&nbsp;eget&nbsp;duis&nbsp;at&nbsp;tellus&nbsp;at&nbsp;urna&nbsp;condimentum&nbsp;mattis&nbsp;pellentesque&nbsp;id&nbsp;nibh&nbsp;tortor&nbsp;i&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;aliquet&nbsp;lectus&nbsp;proin&nbsp;nibh&nbsp;nisl&nbsp;condimentum&nbsp;id&nbsp;venenatis&nbsp;a&nbsp;condimentum&nbsp;vitae&nbsp;sapien&nbsp;pellentesque&nbsp;habitant&nbsp;mo&nbsp;&nbsp;&nbsp;&nbsp;rbi&nbsp;tristique&nbsp;senectus&nbsp;et&nbsp;netus&nbsp;et&nbsp;malesuada&nbsp;fames&nbsp;ac&nbsp;turpis&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mark>&lt;/div&gt;&lt;div&gt;</mark><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Second&nbsp;column&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;tortor&nbsp;consequat&nbsp;id&nbsp;porta&nbsp;nibh&nbsp;venenatis&nbsp;cras&nbsp;sed&nbsp;felis&nbsp;eg&nbsp;&nbsp;&nbsp;&nbsp;et&nbsp;velit&nbsp;aliquet&nbsp;sagittis&nbsp;id&nbsp;consectetur&nbsp;purus&nbsp;ut&nbsp;faucibus&nbsp;pulvinar&nbsp;elementum&nbsp;integer&nbsp;enim&nbsp;neque&nbsp;volutpat&nbsp;ac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tincidunt&nbsp;vitae&nbsp;semper&nbsp;quis&nbsp;lectus&nbsp;nulla&nbsp;at&nbsp;volutpat&nbsp;diam&nbsp;ut&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+				</figure>
+				<p>Each column is represented by a generic <code>&lt;div&gt;</code> element as a child of <code>&lt;body&gt;</code>. In the marked region of the HTML code, the opening tag of the second <code>&lt;div&gt;</code> comes immediately after the closing tag of the first <code>&lt;div&gt;</code> to ensure that no whitespace appears between the two columns.</p>
+				<p>Here is the code for <code>main.css</code>:</p>
+				<figure>
+					<pre><code>body&gt;div&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br>&nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br>&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;1em;<br>&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50%;<br>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align:&nbsp;top;<br>}</code></pre>
+				</figure>
+				<p><code>main.css</code> sets these two <code>&lt;div&gt;</code> elements to stack horizontally and to each have a width of <code>50%</code> of the parent element. The <code>border-box</code> box sizing is to ensure that the padding does not increase the width of the entire element. <code>top</code> for <code>vertical-align</code> ensures that shorter columns align to the top of the tallest element on the line instead of to the bottom of the line.</p>
+				<p>The result:</p>
+				<style>
+					.whole-width { width: 100%; }
+					.half-width { width: 50%; }
+					.third-width { width: 33.3%; }
+					.column {
+						display: inline-block;
+						box-sizing: border-box;
+						padding: 1em;
+						vertical-align: top;
+					}
+				</style>
+				<figure>
+					<div class="half-width column">
+						<h3>First column</h3>
+						<p>mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</p>
+					</div><div class="half-width column">
+						<h3>Second column</h3>
+						<p>tortor consequat id porta nibh venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut</p>
+					</div>
+				</figure>
+				<p>To create a 3-column layout, a third <code>&lt;div&gt;</code> can be inserted at the end of the body and the width of all the <code>&lt;div&gt;</code> child elements of <code>&lt;body&gt;</code> can be set to <code>33.3%</code>:</p>
+				<p>3-column layout HTML:</p>
+				<figure>
+					<pre><code>&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&nbsp;lang="en"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;href="main.css"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;First&nbsp;column&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;mi&nbsp;in&nbsp;nulla&nbsp;posuere&nbsp;sollicitudin&nbsp;aliquam&nbsp;ultrices&nbsp;sagittis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orci&nbsp;a&nbsp;scelerisque&nbsp;purus&nbsp;semper&nbsp;eget&nbsp;duis&nbsp;at&nbsp;tellus&nbsp;at&nbsp;urna&nbsp;condimentum&nbsp;mattis&nbsp;pellentesque&nbsp;id&nbsp;nibh&nbsp;tortor&nbsp;i&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;aliquet&nbsp;lectus&nbsp;proin&nbsp;nibh&nbsp;nisl&nbsp;condimentum&nbsp;id&nbsp;venenatis&nbsp;a&nbsp;condimentum&nbsp;vitae&nbsp;sapien&nbsp;pellentesque&nbsp;habitant&nbsp;mo&nbsp;&nbsp;&nbsp;&nbsp;rbi&nbsp;tristique&nbsp;senectus&nbsp;et&nbsp;netus&nbsp;et&nbsp;malesuada&nbsp;fames&nbsp;ac&nbsp;turpis&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Second&nbsp;column&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;tortor&nbsp;consequat&nbsp;id&nbsp;porta&nbsp;nibh&nbsp;venenatis&nbsp;cras&nbsp;sed&nbsp;felis&nbsp;eg&nbsp;&nbsp;&nbsp;&nbsp;et&nbsp;velit&nbsp;aliquet&nbsp;sagittis&nbsp;id&nbsp;consectetur&nbsp;purus&nbsp;ut&nbsp;faucibus&nbsp;pulvinar&nbsp;elementum&nbsp;integer&nbsp;enim&nbsp;neque&nbsp;volutpat&nbsp;ac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tincidunt&nbsp;vitae&nbsp;semper&nbsp;quis&nbsp;lectus&nbsp;nulla&nbsp;at&nbsp;volutpat&nbsp;diam&nbsp;ut&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Third&nbsp;column&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;vitae&nbsp;suscipit&nbsp;tellus&nbsp;mauris&nbsp;a&nbsp;diam&nbsp;maecenas&nbsp;sed&nbsp;enim&nbsp;ut&nbsp;sem&nbsp;viverra&nbsp;aliquet&nbsp;eget&nbsp;sit&nbsp;amet&nbsp;tellus&nbsp;cras&nbsp;adipiscing&nbsp;enim&nbsp;eu&nbsp;turpis&nbsp;egestas&nbsp;pretium&nbsp;aenean&nbsp;pharetra&nbsp;magna&nbsp;ac&nbsp;placerat&nbsp;vestibulum&nbsp;lectus&nbsp;mauris&nbsp;ultrices&nbsp;eros&nbsp;in&nbsp;cursus&nbsp;turpis&nbsp;massa&nbsp;tincidunt&nbsp;dui&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+				</figure>
+				<p>3-column layout CSS:</p>
+				<figure>
+					<pre><code>body&gt;div&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br>&nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br>&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;1em;<br>&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;33.3%;<br>&nbsp;&nbsp;&nbsp;&nbsp;vertical-align:&nbsp;top;<br>}</code></pre>
+				</figure>
+				<p>Result:</p>
+				<figure>
+					<div class="third-width column">
+                        			<h3>First column</h3>
+                        			<p>mi in nulla posuere sollicitudin aliquam ultrices sagittis     orci a scelerisque purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor i    d aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant mo    rbi tristique senectus et netus et malesuada fames ac turpis</p>
+                			</div><div class="third-width column">
+                        			<h3>Second column</h3>
+                        			<p>tortor consequat id porta nibh venenatis cras sed felis eg    et velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac     tincidunt vitae semper quis lectus nulla at volutpat diam ut</p>
+                			</div><div class="third-width column">
+                        			<h3>Third column</h3>
+                        			<p>vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui</p>
+                			</div>
+                		</figure>
+                	</article>
+                </main>
+	</body>
+</html>
