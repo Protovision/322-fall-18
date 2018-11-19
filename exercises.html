@@ -54,6 +54,7 @@
 							<li><a href="#ex5">Exercise 5</a></li>
 							<li><a href="#ex6">Exercise 6</a></li>
 							<li><a href="#ex7">Exercise 7</a></li>
+							<li><a href="#ex8">Exercise 8</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -104,6 +105,19 @@
 						<li>If the webpage is being printed, hide the navigation bar and hide the website title.</li>
 					</ul>
 					<p>Research CSS media queries to help you with this exercise.</p> 
+				</section>
+				<section id="ex8">
+					<h3>Exercise 8</h3>
+					<p>Take the web page that you created for Exercise 7 and add 2 buttons on the page. The first button should be labeled "Light theme" and the second button should be labeled "Dark theme". When clicked, the "Light theme" button should modify the CSS of the webpage to have light background colors and dark foreground colors. When clicked, the "Dark theme" button should modify the CSS of the webpage to have dark background colors and light foreground colors. The webpage should keep it's theme after being refreshed.</p>
+					<p>A button can be created by using the <code>&lt;input&gt;</code> element with <code>type="button"</code>. A button's <code>onclick</code> attribute can be used to make a JavaScript function call.</p>
+					<p>In JavaScript, <code>document.querySelector</code> and <code>document.querySelectorAll</code> can be used to select an HTML element(s) based on a CSS selector string such as <code>"body&gt;main"</code> or <code>"#id"</code>. Once an HTML element object is obtained, it's <code>style</code> property contains CSS related properties such as <code>color</code> and <code>backgroundColor</code> which can be read or assigned-to to dynamically change the CSS style of the associated HTML element.</p>
+					<p><code>localStorage</code> can be used to store strings associated with the webpage that persists even after the browser or tab is closed.</p>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">document.querySelector</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">document.querySelectorAll</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference">JavaScript: Common CSS properties accessed via HTMLElement.style</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">JavaScript: localStorage</a></li>
+					</ul>
 				</section>
 			</article>
 		</main>
