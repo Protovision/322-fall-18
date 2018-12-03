@@ -106,6 +106,12 @@ main p { margin: 6pt 0 6pt 0; padding: 0; }
 		box-shadow: none;
 		text-shadow: none;
 	}
+	main table {
+		border: 2px solid Black !important;
+	}
+	main table th, main table td {
+		border: 2px solid Black !important;
+	}
 	main a { color: Black; background-color: transparent; }
 	main>article { page-break-before: always; }
 	main>section { page-break-before: always; }
